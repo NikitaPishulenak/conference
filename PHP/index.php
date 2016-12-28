@@ -8,49 +8,6 @@
     <script src="../JS/scriptStyle.js"></script>
 </head>
 <body>
-<div>
-    <!---->
-    <!--<h1> Выбери категорию</h1>-->
-    <!---->
-    <!---->
-    <!--    --><?php
-    //    if(isset($_POST['butOK']))
-    //    {
-    //        $selCount=$_POST['counter'];
-    //        echo $selCount;
-    //    }
-    //
-    //
-    //
-    //    $dbc=mysqli_connect('localhost', 'root','', 'example')
-    //        or die(" Не удалось соединиться с БД");
-    //    $query="SELECT * FROM tesisName";
-    //    $result=mysqli_query($dbc, $query)
-    //        or die(" Не удалось выполнить запрос");
-    //    ?>
-    <!--    <form method="post" action="--><?php //echo $_SERVER['PHP_SELF']; ?><!--">-->
-    <!---->
-    <!--        <select name="counter">-->
-    <!--            --><?php
-    //            while($row=mysqli_fetch_array($result))
-    //            {
-    //                echo"<option name='val ' >".$row['name_tesis']."</option>";
-    //            }
-    //            ?>
-    <!--        </select><br>-->
-    <!---->
-    <!--       <button type="submit" name="butOK" value="butOK">OK</button>-->
-    <!--        <input type="submit" name="subOK" value="Отправить">-->
-    <!--    </form>-->
-    <!---->
-    <!---->
-    <!---->
-    <!---->
-    <?php
-    //    mysqli_close($dbc);
-    //    ?>
-    <!---->
-</div>
 
 <div class="header">
     <h1> Регистрация участников LXXI</h1>
@@ -78,6 +35,7 @@
             echo '<option>'.$row['name_language'].'</option>';
         }
         echo'</select>';
+        mysqli_close($dbc);
         ?>
     </div>
 
@@ -121,8 +79,302 @@
     <br><br>
 
 
+    <h1 id="aboutAuthor"> Информация об авторе (Information about the Author)</h1><hr><br>
+    <div id="aboutAuthor">
 
-    
+        <b> Фамилия автора (Author`s Surname):</b><br>
+        <input type="text" name="secondname" required pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$ " placeholder="Соколов"><br><br>
+
+        <b> Имя автора (Author`s Name):</b><br>
+        <input type="text" name="firstname" required pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$ " placeholder="Александр"><br><br>
+
+        <b> Отчество автора (Author`s Second name):</b><br>
+        <input type="text" name="midlname" required pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$ " placeholder="Александрович"><br><br>
+
+        <b> Дата рождения автора (Date of Birth):</b><br>
+        <input type="date" name="birthdate" max="2007-01-01" min="1920-01-01"><br><br>
+
+        <b> Город автора (City):</b><br>
+        <input type="text" name="city"required placeholder="Минск" pattern="^[а-яА-ЯёЁa-zA-Z]+$ "><br><br>
+
+        <b> Страна автора (Country):</b><br>
+        <input type="text" name="country"required placeholder="Республика Беларусь" pattern="^[а-яА-ЯёЁa-zA-Z]+$ "><br><br>
+
+        <b> Полное название учебного заведения/организации автора (Full name of the institution which the Author represent):</b><br>
+        <em class="hint">Пример (example): Белорусский государственный медицинский университет</em><br>
+        <input type="radio" name="universityName" value="БГМУ"><em class="radioNameUniver"> Белорусский государственный медицинский университет</em><br>
+        <input type="radio" name="universityName" value="другое"><em class="radioNameUniver"> Другое:</em>
+        <input type="text" name="nameOtherUniversity" pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" id="otherUniver"> <br><br>
+
+        <b> Сокращенное название учебного заведения/организации автора (Abbreviation of the institution, which the Author represent):</b><br>
+        <input type="text" name="abbreviatureUniver"required placeholder="БГМУ" pattern="^[А-ЯA-Z]+$ "><br><br>
+
+        <b> Статус автора (Status of the author):</b><br>
+        <em class="hint"> На момент участия в Конференции</em><br>
+
+        <?php
+        include_once 'connect.php';
+        $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
+            or die("Не удалось подключиться к БД");
+        $query="SELECT * FROM statuses";
+        $result=mysqli_query($dbc, $query)
+        or die ("Не удалось выполнить запрос");
+
+        echo'<select name="statusAuthor" required>';
+        while($row=mysqli_fetch_array($result))
+        {
+            echo '<option>'.$row['name_status'].'</option>';
+        }
+        echo'</select>';
+        mysqli_close($dbc);
+        ?><br><br>
+
+        <b> Факультет автора (faculty of the Author):</b><br>
+        <em class="hint">Если Вы не являетесь студентом, выберите вариант ответа "Нет" (If you are not a student, select "No")</em><br>
+
+        <input type="radio" name="facultyName" value="Лечебный (General Medicine)"><em class="radioNameUniver"> Лечебный (General Medicine)</em><br>
+        <input type="radio" name="facultyName" value="Педиатрический (Pediatrics)"><em class="radioNameUniver"> Педиатрический (Pediatrics)</em><br>
+        <input type="radio" name="facultyName" value="Стоматологический (Dentisty)"><em class="radioNameUniver">Стоматологический (Dentisty)</em><br>
+        <input type="radio" name="facultyName" value="Медико-профилактический (Preventive Medicine)"><em class="radioNameUniver"> Медико-профилактический (Preventive Medicine)</em><br>
+        <input type="radio" name="facultyName" value="Военно-медицинский (Military Medicine)"><em class="radioNameUniver"> Военно-медицинский (Military Medicine)</em><br>
+        <input type="radio" name="facultyName" value="Фармацевтический (Pharmacy)"><em class="radioNameUniver"> Фармацевтический (Pharmacy)</em><br>
+        <input type="radio" name="facultyName" value="Медицинский факультет иностранных учащихся (Medical Faculty for International Students)"><em class="radioNameUniver"> Медицинский факультет иностранных учащихся (Medical Faculty for International Students)</em><br>
+        <input type="radio" name="facultyName" value="-Нет/No-"><em class="radioNameUniver"> -Нет/No-</em><br>
+
+        <input type="radio" name="facultyName" value="Другое"><em class="radioNameUniver"> Другое:</em>
+        <input type="text" name="nameOtherFaculty" pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" id="otherUniver"> <br><br>
+
+
+        <b> Курс автора (Course):</b><br>
+        <?php
+        include_once 'connect.php';
+        $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
+            or die("Не удалось подключиться к БД");
+        $query="SELECT * FROM courses";
+        $result=mysqli_query($dbc, $query)
+            or die ("Не удалось выполнить запрос");
+
+        echo'<select name="courseAuthor" required>';
+        while($row=mysqli_fetch_array($result))
+        {
+            echo '<option>'.$row['name_course'].'</option>';
+        }
+        echo'</select>';
+        mysqli_close($dbc);
+        ?><br><br>
+
+        <b> E-mail автора:</b><br>
+        <em class="hint">Ввнимание! Указанный Вами e-mail будет использован Оргкомитетом Конференции для обратной связи
+        (Attention! Your e-mail will be used by the Organizing Commitee of the Conference for feedback)</em><br>
+        <input type="email" name="emailAuthor" placeholder="example@exam.ru" required pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$ "><br><br>
+
+        <b> Телефон автора (Telephone №):</b><br>
+        <em class="hint">+375*********</em><br>
+        <input type="tel" name="telAuthor" required pattern="^(+375)\d{9}$"><br><br>
+    </div>
+
+
+
+        <h1 id="secondAuthorLabel">Сведения о Соавторе<br>
+        Information about the Second Author
+        </h1>
+    <div id="secondAuthor">
+
+        <h3 id="firstSupervisorLabel" >Сведения о 1-ом научном руководителе<br>
+            Information about the first Supervisor
+        </h3><hr>
+
+        <div id="firstSupervisor">
+
+
+            <b> Фамилия 1-го научного руководителя (Surname of the 1st Supervisor):</b><br>
+            <input type="text" name="secondnameSupervisor" required pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$ " placeholder="Петрова"><br><br>
+
+            <b> Имя 1-го научного руководителя (Name of the 1st Supervisor):</b><br>
+            <input type="text" name="firstnameSupervisor" required pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$ " placeholder="Маргорита"><br><br>
+
+            <b> Отчество 1-го научного руководителя (Second name of the 1st Supervisor):</b><br>
+            <input type="text" name="midlnameSupervisor" required pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$ " placeholder="Александровна"><br><br>
+
+            <b>Учёная степень 1-го научного руководителя (Scientific degree of the 1st Supervisor</b><br>
+
+            <?php
+            include_once 'connect.php';
+            $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
+            or die("Не удалось подключиться к БД");
+            $query="SELECT * FROM scientificDegree";
+            $result=mysqli_query($dbc, $query)
+            or die ("Не удалось выполнить запрос");
+
+            echo'<select name="scientificDegree" required>';
+            while($row=mysqli_fetch_array($result))
+            {
+                echo '<option>'.$row['name_scientificDegree'].'</option>';
+            }
+            echo'</select>';
+            mysqli_close($dbc);
+            ?><br><br>
+
+            <b>Учёное звание 1-го научного руководителя (Academic rank of the 1st Supervisor</b><br>
+
+            <?php
+            include_once 'connect.php';
+            $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
+            or die("Не удалось подключиться к БД");
+            $query="SELECT * FROM academicRanks";
+            $result=mysqli_query($dbc, $query)
+            or die ("Не удалось выполнить запрос");
+
+            echo'<select name="academicRanks" required>';
+            while($row=mysqli_fetch_array($result))
+            {
+                echo '<option>'.$row['name_academicRanks'].'</option>';
+            }
+            echo'</select>';
+            mysqli_close($dbc);
+            ?><br><br>
+
+
+            <b>Должность 1-го научного руководителя (Position of the 1st Supervisor</b><br>
+
+            <?php
+            include_once 'connect.php';
+            $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
+            or die("Не удалось подключиться к БД");
+            $query="SELECT * FROM positionSupervisor";
+            $result=mysqli_query($dbc, $query)
+            or die ("Не удалось выполнить запрос");
+
+            echo'<select name="positionSupervisor" required>';
+            while($row=mysqli_fetch_array($result))
+            {
+                echo '<option>'.$row['name_positionSupervisor'].'</option>';
+            }
+            echo'</select>';
+            mysqli_close($dbc);
+            ?><br><br>
+
+
+            <b> Полное название учебного заведения/организации 1-го научного руководителя (Full name of the 1st Supervisor institution):</b><br>
+            <input type="radio" name="universityNameSupervisor" value="БГМУ"><em class="radioNameUniver"> Белорусский государственный медицинский университет</em><br>
+            <input type="radio" name="universityNameSupervisor" value="другое"><em class="radioNameUniver"> Другое:</em>
+            <input type="text" name="nameOtherUniversitySupervisor" pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" id="otherUniver"> <br><br>
+
+
+            <b>Название кафедры/структурного подразделения 1-го научного руководителя (Department)</b><br>
+            <em class="hint"> Пример (example): Акушерства и гинекологии</em><br>
+            <input type="text" name="department"required pattern="^[а-яА-ЯёЁa-zA-Z]+$ "><br><br>
+
+            <b> Город 1-го научного руководителя (City):</b><br>
+            <input type="text" name="citySupervisor"required placeholder="Минск" pattern="^[а-яА-ЯёЁa-zA-Z]+$ "><br><br>
+
+            <b> E-mail  1-го научного руководителя (E-mail of the 1st Supervisor):</b><br>
+            <input type="email" name="emailSupervisor" placeholder="example@exam.ru" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$ "><br><br>
+
+            <b> Телефон 1-го научного руководителя (Telephone № of the 1st Supervisor):</b><br>
+            <input type="tel" name="telAuthor"><br><br>
+
+        </div>
+
+
+        <h3 id="secondSupervisorLabel">Сведения о 2-ом научном руководителе<br>
+            Information about the second Supervisor
+        </h3><hr>        
+
+        <div id="secondSupervisor">
+            
+            <b> Фамилия 2-го научного руководителя (Surname of the 2st Supervisor):</b><br>
+            <input type="text" name="secondnameSupervisor2"  pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$ " placeholder="Петрова"><br><br>
+
+            <b> Имя 2-го научного руководителя (Name of the 2st Supervisor):</b><br>
+            <input type="text" name="firstnameSupervisor2"  pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$ " placeholder="Маргорита"><br><br>
+
+            <b> Отчество 2-го научного руководителя (Second name of the 2st Supervisor):</b><br>
+            <input type="text" name="midlnameSupervisor2"  pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$ " placeholder="Александровна"><br><br>
+
+            <b>Учёная степень 2-го научного руководителя (Scientific degree of the 2st Supervisor</b><br>
+
+            <?php
+            include_once 'connect.php';
+            $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
+            or die("Не удалось подключиться к БД");
+            $query="SELECT * FROM scientificDegree";
+            $result=mysqli_query($dbc, $query)
+            or die ("Не удалось выполнить запрос");
+
+            echo'<select name="scientificDegree2" >';
+            while($row=mysqli_fetch_array($result))
+            {
+                echo '<option>'.$row['name_scientificDegree'].'</option>';
+            }
+            echo'</select>';
+            mysqli_close($dbc);
+            ?><br><br>
+
+            <b>Учёное звание 2-го научного руководителя (Academic rank of the 2st Supervisor</b><br>
+
+            <?php
+            include_once 'connect.php';
+            $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
+            or die("Не удалось подключиться к БД");
+            $query="SELECT * FROM academicRanks";
+            $result=mysqli_query($dbc, $query)
+            or die ("Не удалось выполнить запрос");
+
+            echo'<select name="academicRanks2" >';
+            while($row=mysqli_fetch_array($result))
+            {
+                echo '<option>'.$row['name_academicRanks'].'</option>';
+            }
+            echo'</select>';
+            mysqli_close($dbc);
+            ?><br><br>
+
+
+            <b>Должность 2-го научного руководителя (Position of the 2st Supervisor</b><br>
+
+            <?php
+            include_once 'connect.php';
+            $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
+            or die("Не удалось подключиться к БД");
+            $query="SELECT * FROM positionSupervisor";
+            $result=mysqli_query($dbc, $query)
+            or die ("Не удалось выполнить запрос");
+
+            echo'<select name="positionSupervisor2" >';
+            while($row=mysqli_fetch_array($result))
+            {
+                echo '<option>'.$row['name_positionSupervisor'].'</option>';
+            }
+            echo'</select>';
+            mysqli_close($dbc);
+            ?><br><br>
+
+
+            <b> Полное название учебного заведения/организации 2-го научного руководителя (Full name of the 2st Supervisor institution):</b><br>
+            <input type="radio" name="universityNameSupervisor2" value="БГМУ"><em class="radioNameUniver"> Белорусский государственный медицинский университет</em><br>
+            <input type="radio" name="universityNameSupervisor2" value="другое"><em class="radioNameUniver"> Другое:</em>
+            <input type="text" name="nameOtherUniversitySupervisor2" pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" id="otherUniver"> <br><br>
+
+
+            <b>Название кафедры/структурного подразделения 2-го научного руководителя (Department)</b><br>
+            <em class="hint"> Пример (example): Акушерства и гинекологии</em><br>
+            <input type="text" name="department2" pattern="^[а-яА-ЯёЁa-zA-Z]+$ "><br><br>
+
+            <b> Город 2-го научного руководителя (City):</b><br>
+            <input type="text" name="citySupervisor2" placeholder="Минск" pattern="^[а-яА-ЯёЁa-zA-Z]+$ "><br><br>
+
+            <b> E-mail  2-го научного руководителя (E-mail of the 2st Supervisor):</b><br>
+            <input type="email" name="emailSupervisor2" placeholder="example@exam.ru" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$ "><br><br>
+
+            <b> Телефон 2-го научного руководителя (Telephone № of the 2st Supervisor):</b><br>
+            <input type="tel" name="telAuthor2" value="+375"><br><br>
+
+        </div>
+
+
+
+    </div>
 </div>
 
 

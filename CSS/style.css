@@ -1,3 +1,11 @@
+input[type=text], input[type=email]{
+    width: 300px;
+}
+
+input:hover{
+    border:solid lime 2px;
+    background-color: gainsboro;
+}
 .header{
     text-align: center;
     color: yellow;
@@ -5,6 +13,7 @@
 
 .hint{
     color: red;
+    padding: 0px 20px 0px 20px;
 }
 
 #conteiner{
@@ -16,5 +25,29 @@
 body{
     background-image: url("../Images/svetlyj-fon.jpg");
     opacity: 0.7;
+}
 
+b{
+    color: blue;
+}
+
+input[type=radio]
+{
+    position: absolute;
+    left: 30%;
+}
+em.radioNameUniver{
+    position: absolute;
+    left: 33%;
+}
+
+#otherUniver{
+    position: absolute;
+    left: 37%;
+}
+
+hr{
+    color: grey;
+    width: 90%;
+    align-items:center;
 }
