@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $("#aboutAuthor").click(function () {
         $("div#aboutAuthor").slideToggle(500);
     });
@@ -18,4 +19,8 @@ $(document).ready(function () {
     $("#otherInformationLabel").click(function () {
         $("div#otherInformation").slideToggle(500);
     });
+    
+    // $("#otherUniver1").checked(function () {
+    //     $("#otherUniver").toggle(400);
+    // })
 });
