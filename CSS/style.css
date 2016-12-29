@@ -1,5 +1,5 @@
 input[type=text], input[type=email]{
-    width: 300px;
+    width: 50%;
 }
 
 input:hover{
@@ -39,15 +39,38 @@ input[type=radio]
 em.radioNameUniver{
     position: absolute;
     left: 33%;
-}
+   }
 
 #otherUniver{
     position: absolute;
-    left: 37%;
+    left: 41%;
+    width:30%;
 }
 
 hr{
     color: grey;
     width: 90%;
     align-items:center;
+}
+
+select{
+    max-width: 80%;
+}
+textarea{
+    width: 75%;
+}
+
+button{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    height: 8%;
+    width: 20%;
+    color: black;
+    font-size: 11px;
+    font-family: Tahoma;
+    background: lawngreen;
+    /*!important;*/
+    outline: none;
 }

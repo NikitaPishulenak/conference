@@ -14,4 +14,8 @@ $(document).ready(function () {
     $("#secondSupervisorLabel").click(function () {
         $("div#secondSupervisor").slideToggle(500);
     });
+
+    $("#otherInformationLabel").click(function () {
+        $("div#otherInformation").slideToggle(500);
+    });
 });
