@@ -231,7 +231,7 @@ if(isset($_POST['btnSend']))
             <input type="text" name="midlname" required pattern="^[А-Я]{1}[а-яА-Я\-]{2,30}|[A-Z]{1}[a-zA-Z\-]{2,30}$" placeholder="Александрович"><br><br>
 
             <b> Дата рождения автора (Date of Birth):</b><br>
-            <input type="date" name="birthdate" max="2007-01-01" min="1920-01-01" required title="Введите в формате: ГГГГ-ММ-ДД"><br><br>
+            <input type="date" name="birthdate" max="2007-01-01" min="1920-01-01" required title="Введите в формате: ГГГГ-ММ-ДД" placeholder="ГГГГ-ММ-ДД"><br><br>
 
             <b> Город автора (City):</b><br>
             <input type="text" name="city"required placeholder="Минск" pattern="^[А-Я]{1}[а-яА-Я\-\s]{2,40}|[A-Z]{1}[a-zA-Z\-\s]{2,40}$"><br><br>
@@ -538,9 +538,12 @@ if(isset($_POST['btnSend']))
 
         <button  type="submit" name="btnSend" ><a href="info.html">Отправить</a></button><br><br>
 
+        </div>
 </form>
 
-
+<footer>
+    <h3> &copy Центр развития информационных технологий БГМУ 2017 </h3>
+</footer>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 29 2016 г., 12:08
+-- Время создания: Дек 31 2016 г., 12:56
 -- Версия сервера: 5.5.50
 -- Версия PHP: 5.3.29
 
@@ -74,7 +74,36 @@ CREATE TABLE IF NOT EXISTS `boss` (
   `city` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `telephone` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `boss`
+--
+
+INSERT INTO `boss` (`id_boss`, `firstnameBoss`, `secondnameBoss`, `midlnameBoss`, `id_scientificDegree`, `id_academicRanks`, `id_positionSupervisor`, `fullNameInstitute`, `name_department`, `city`, `email`, `telephone`) VALUES
+(1, 'Галина', 'Степанова', '', 4, 2, 6, 'мед', 'ПОИТ', 'Гомель', 'sdcs', '103'),
+(2, 'Игорь', 'Алексеев', 'Геннадьевич', 9, 8, 0, 'Белорусский государственный медицинский университет', 'ПОИТехнологий', 'Псков', 'kon@mail.ru', '375778567734'),
+(3, 'Игорь', 'Алексеев', 'Геннадьевич', 9, 8, 0, 'Белорусский государственный медицинский университет', 'ПОИТехнологий', 'Псков', 'kon@mail.ru', '375778567734'),
+(4, 'Ларп', 'Првв', 'Лара', 2, 2, 0, 'Белорусский государственный медицинский университет', 'ПОИТехнологий', 'Псков', 'kon@mail.ru', '375778567734'),
+(5, 'Ларп', 'Алексеев', 'Геннадьевич', 1, 1, 3, 'Белорусский государственный медицинский университет', 'ПОИТехнологий', 'Псков', 'kon@mail.ru', '375778567734'),
+(6, 'Игорь', 'Првв', 'Геннадьевич', 1, 1, 1, 'Белорусский государственный медицинский университет', 'Акушерства', 'Питер', 'kon@mail.ru', '375778567734'),
+(7, 'Николай', 'Мельник', 'Иосифович', 2, 2, 2, 'Белорусский государственный медицинский университет', 'Вибрации', 'Витебск', 'mel@gmail.ru', ''),
+(8, 'Игорь', 'Алексеев', 'Геннадьевич', 1, 1, 1, 'Белорусский государственный медицинский университет', 'Аукпркеркеркер', 'Минск', '', ''),
+(9, 'Николай', 'Мельник', 'Иосифович', 1, 1, 1, 'Белорусский государственный медицинский университет', '', '', '', ''),
+(10, 'Елена', 'Мельникова', 'Владимировна', 18, 4, 6, 'Белорусский государственный медицинский университет', 'Предприятие', 'Минск', 'kon@mail.ru', ''),
+(11, 'Антон', 'Степанов', '', 1, 1, 1, '', '', '', '', ''),
+(12, 'Елена', 'Мельникова', 'Владимировна', 18, 4, 6, 'Белорусский государственный медицинский университет', 'Предприятие', 'Минск', 'kon@mail.ru', ''),
+(13, 'Антон', 'Степанов', '', 1, 1, 1, '', '', '', '', ''),
+(14, 'Елена', 'Мельникова', 'Владимировна', 18, 4, 6, 'Белорусский государственный медицинский университет', 'Предприятие', 'Минск', 'kon@mail.ru', ''),
+(15, 'Антон', 'Степанов', '', 1, 1, 1, '', '', '', '', ''),
+(16, 'Ларп', 'Првв', 'Владимировна', 1, 1, 1, 'Белорусский государственный медицинский университет', 'Предприятие', 'Минск', 'kon@mail.ru', '375778567734'),
+(17, 'Николай', 'Степанов', 'Иосифович', 1, 1, 1, 'Белорусский государственный медицинский университет', '', '', '', ''),
+(18, 'Ларп', 'Првв', 'Владимировна', 1, 1, 1, 'Белорусский государственный медицинский университет', 'Предприятие', 'Минск', 'kon@mail.ru', '375778567734'),
+(19, 'Николай', 'Степанов', 'Иосифович', 1, 1, 1, 'Белорусский государственный медицинский университет', '', '', '', ''),
+(20, 'Елена', 'Мельникова', 'Владимировна', 18, 1, 6, 'Бгуиру', 'Программноеобеспечение', 'Минск', 'mel@mail.ru', ''),
+(21, '', '', '', 1, 1, 1, '', '', '', '', ''),
+(22, 'Ларп', 'Алексеев', 'Владимировна', 5, 7, 17, 'Белорусский государственный', 'Авамвмвма', 'Псков', 'kon@mail.ru', ''),
+(23, '', '', '', 1, 1, 1, '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -128,7 +157,7 @@ INSERT INTO `courses` (`id_course`, `name_course`) VALUES
 CREATE TABLE IF NOT EXISTS `faculties` (
   `id_faculti` int(10) NOT NULL,
   `name_faculti` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `faculties`
@@ -142,7 +171,8 @@ INSERT INTO `faculties` (`id_faculti`, `name_faculti`) VALUES
 (5, 'Военно-медицинский (Military Medicine)'),
 (6, 'Фармацевтический (Pharmacy)'),
 (7, 'Медицинский факультет иностранных учащихся (Medical Faculty for International Students)'),
-(8, '-Нет/No-');
+(8, '-Нет/No-'),
+(9, 'Другое');
 
 -- --------------------------------------------------------
 
@@ -238,11 +268,35 @@ CREATE TABLE IF NOT EXISTS `reports` (
   `materialsAndMethods` text NOT NULL,
   `results` text NOT NULL,
   `conclusions` text NOT NULL,
-  `id_contentReport` int(11) NOT NULL,
-  `id_formParticipation` int(11) NOT NULL,
-  `id_sections` int(11) NOT NULL,
+  `id_contentReport` int(10) NOT NULL,
+  `id_formParticipation` int(10) NOT NULL,
+  `id_sections` int(10) NOT NULL,
   `id_language` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `reports`
+--
+
+INSERT INTO `reports` (`id_report`, `title_report`, `introduction`, `aim`, `materialsAndMethods`, `results`, `conclusions`, `id_contentReport`, `id_formParticipation`, `id_sections`, `id_language`) VALUES
+(1, 'Эхо', 'стол', '1', '1', '1', '1', 1, 1, 1, 1),
+(2, 'Керберос', 'стол', '1', '1', '1', '1', 1, 1, 1, 1),
+(3, 'Керберос', 'стол', '1', '1', '1', '1', 1, 1, 1, 1),
+(4, 'Проверка', 'Первый', 'Вротой', 'Третьй', 'вам', 'вам', 3, 1, 1, 4),
+(5, 'Проверка', 'Первый', 'Вротой', 'Третьй', 'вам', 'вам', 3, 1, 1, 4),
+(6, 'Аттестация ', 'Введение', 'цель', 'мат', 'результ', 'вывод', 2, 2, 2, 1),
+(7, 'Аттестация ', 'Введение', 'цель', 'мат', 'результ', 'вывод', 2, 2, 2, 1),
+(8, 'Зхрень ', 'хрень ', 'хрень ', 'хрень ', 'хрень ', 'хрень ', 1, 1, 1, 2),
+(9, 'Оригиналы протезов', 'керр', 'ке', 'кер', 'ркркерк', 'керкер', 1, 1, 1, 1),
+(10, 'Оригиналы протезов', 'ergr', 'erger', 'gregythy', 'jyukiuaedf', 'укрнгокек', 2, 1, 17, 2),
+(11, 'Керберос', 'ferfre', 'ука', 'укаука', 'укапкепкре', 'керкерке', 1, 1, 1, 1),
+(12, 'Сеть Кирхгофа', 'Введение', 'Цель', 'Материалы и методы', 'Результаты какие-то', 'Выводы', 2, 3, 16, 1),
+(13, 'Сеть Кирхгофа', 'Введение', 'Цель', 'Материалы и методы', 'Результаты какие-то', 'Выводы', 2, 3, 16, 1),
+(14, 'Сеть Кирхгофа', 'Введение', 'Цель', 'Материалы и методы', 'Результаты какие-то', 'Выводы', 2, 3, 16, 1),
+(15, 'Оригиналы протезов', 'rtyhrty', 'rtyrty', 'кен', 'кенекн', 'кенкен', 1, 1, 1, 2),
+(16, 'Оригиналы протезов', 'rtyhrty', 'rtyrty', 'кен', 'кенекн', 'кенкен', 1, 1, 1, 2),
+(17, 'Автоматизация деятельности приемной комиссии', 'Изучение переднего и заднего решетчатых отверстий актуально при операциях, травмах медиальной стенки глазницы и разработке хирургического доступа. Данные о форме, размерах, количестве решетчатых отверстий, расположении у лиц различного пола и конституции противоречивы. В диагностике этих отверстий используется эндоскопический метод, но его возможности ограничены из-за отсутствия точных анатомических данных.', 'Установить закономерности строения переднего и заднего решетчатых отверстий человека у лиц различного пола и конституции.', 'Мацерированные черепа человека из краниологической коллекции музея кафедры нормальной анатомии БГМУ изучены с помощью анатомического, морфометрического и статистического методов. ', 'В результате исследования определены размеры, количество, форма решетчатых отверстий. Установлены расстояния между отверстиями и костными ориентирами медиальной стенки глазницы (зрительным каналом, передним слезным гребнем, лобно-решетчатым швом) в зависимости от пола и конституционального типа черепа и глазницы. Выявлены типы черепа и формы глазницы. Определены анатомические предпосылки для безопасного хирургического доступа к медиальной стенке глазницы, которыми являются: отсутствие множественных добавочных решетчатых отверстий; увеличение расстояния между передним слезным гребнем и решетчатыми отверстиями у мужчин; преобладание дистанции между отверстиями и зрительным каналом у женщин. ', '1. Строение и взаимоотношение переднего и заднего решетчатых отверстий человека имеют конституциональные и половые особенности. 2. Существуют определенные закономерности строения, расположения решетчатых отверстий и расстояний между ними и костными ориентирами глазницы.', 2, 2, 11, 1),
+(18, 'Керберос', 'всыссс', 'sdccccccc', 'sdcdcrew', 'cукрпркек', 'екпкпукацув', 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -308,7 +362,7 @@ INSERT INTO `scientificDegree` (`id_scientificDegree`, `name_scientificDegree`) 
 CREATE TABLE IF NOT EXISTS `sections` (
   `id_section` int(10) NOT NULL,
   `name_section` varchar(150) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `sections`
@@ -389,7 +443,8 @@ INSERT INTO `sections` (`id_section`, `name_section`) VALUES
 (72, 'Хирургические болезни/Surgery'),
 (73, 'Челюстно-лицевая хирургия/Maxillofacial Surgery'),
 (74, 'Эндокринология/Endocrinology'),
-(75, 'Эпидемиология/Epidemiology');
+(75, 'Эпидемиология/Epidemiology'),
+(76, 'Оригиналы протезов');
 
 -- --------------------------------------------------------
 
@@ -441,13 +496,23 @@ CREATE TABLE IF NOT EXISTS `users` (
   `fullNameInstitute` text NOT NULL,
   `abbreviationInstitute` varchar(50) NOT NULL,
   `id_status` int(10) NOT NULL,
-  `id_faculti` int(10) NOT NULL,
+  `nameFaculti` text NOT NULL,
   `id_course` int(10) NOT NULL,
   `email` varchar(100) NOT NULL,
   `telephone` varchar(50) NOT NULL,
   `id_firstBoss` int(11) NOT NULL,
-  `id_secondBoss` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id_secondBoss` int(11) DEFAULT NULL,
+  `id_report` int(10) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id_user`, `firstnameUser`, `secondnameUser`, `midlenameUser`, `birthdate`, `city`, `country`, `fullNameInstitute`, `abbreviationInstitute`, `id_status`, `nameFaculti`, `id_course`, `email`, `telephone`, `id_firstBoss`, `id_secondBoss`, `id_report`) VALUES
+(3, 'Никита', 'Пищуленок', '', '2000-01-01', 'Минск', 'РБ', 'мед', 'бгму', 3, '', 3, 'niki@ma.ru', '375334343', 1, 0, 3),
+(4, 'Ник', 'Орлов', 'Алекс', '1995-09-29', 'Лепель', 'Республика Беларусь', 'Белорусский государственный медицинский университет', 'БГУИР', 1, '', 5, 'niki1995-11@mail.ru', '375336112211', 18, 19, 16),
+(5, 'Никита', 'Пищуленок', 'Александрович', '0000-00-00', 'Минск', 'Республика Беларусь', 'Белорусский-государственный-университет-информатики-и-радиоэлектроники', 'БГУИР', 1, '', 5, 'niki@mail.ru', '+375297126743', 20, 21, 17);
 
 --
 -- Индексы сохранённых таблиц
@@ -509,11 +574,9 @@ ALTER TABLE `positionSupervisor`
 --
 ALTER TABLE `reports`
   ADD PRIMARY KEY (`id_report`),
-  ADD UNIQUE KEY `id_contentReport` (`id_contentReport`),
-  ADD UNIQUE KEY `id_formParticipation` (`id_formParticipation`),
-  ADD UNIQUE KEY `id_sections` (`id_sections`),
-  ADD KEY `id_report` (`id_report`),
-  ADD KEY `id_language` (`id_language`);
+  ADD KEY `id_contentReport` (`id_contentReport`),
+  ADD KEY `id_contentReport_2` (`id_contentReport`),
+  ADD KEY `id_contentReport_3` (`id_contentReport`,`id_formParticipation`,`id_sections`,`id_language`);
 
 --
 -- Индексы таблицы `scientificDegree`
@@ -539,7 +602,6 @@ ALTER TABLE `statuses`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`),
   ADD KEY `id_status` (`id_status`),
-  ADD KEY `id_faculti` (`id_faculti`),
   ADD KEY `id_course` (`id_course`),
   ADD KEY `id_firstBoss` (`id_firstBoss`),
   ADD KEY `id_secondBoss` (`id_secondBoss`);
@@ -557,7 +619,7 @@ ALTER TABLE `academicRanks`
 -- AUTO_INCREMENT для таблицы `boss`
 --
 ALTER TABLE `boss`
-  MODIFY `id_boss` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_boss` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT для таблицы `contentsReport`
 --
@@ -572,7 +634,7 @@ ALTER TABLE `courses`
 -- AUTO_INCREMENT для таблицы `faculties`
 --
 ALTER TABLE `faculties`
-  MODIFY `id_faculti` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id_faculti` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT для таблицы `formParticipation`
 --
@@ -592,7 +654,7 @@ ALTER TABLE `positionSupervisor`
 -- AUTO_INCREMENT для таблицы `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `id_report` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_report` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT для таблицы `scientificDegree`
 --
@@ -602,7 +664,7 @@ ALTER TABLE `scientificDegree`
 -- AUTO_INCREMENT для таблицы `sections`
 --
 ALTER TABLE `sections`
-  MODIFY `id_section` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=76;
+  MODIFY `id_section` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=77;
 --
 -- AUTO_INCREMENT для таблицы `statuses`
 --
@@ -612,7 +674,23 @@ ALTER TABLE `statuses`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- Ограничения внешнего ключа сохраненных таблиц
+--
+
+--
+-- Ограничения внешнего ключа таблицы `boss`
+--
+ALTER TABLE `boss`
+  ADD CONSTRAINT `boss_ibfk_1` FOREIGN KEY (`id_academicRanks`) REFERENCES `academicRanks` (`id_academicRanks`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ограничения внешнего ключа таблицы `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`id_firstBoss`) REFERENCES `boss` (`id_boss`) ON DELETE CASCADE ON UPDATE CASCADE;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
