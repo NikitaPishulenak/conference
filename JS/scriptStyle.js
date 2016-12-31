@@ -3,6 +3,9 @@ $(document).ready(function () {
     $("#aboutAuthor").click(function () {
         $("div#aboutAuthor").slideToggle(500);
     });
+    $("#aboutAuthor2").click(function () {
+        $("div#aboutAuthor2").slideToggle(500);
+    });
 
     $("#secondAuthorLabel").click(function () {
         $("div#secondAuthor").slideToggle(500);

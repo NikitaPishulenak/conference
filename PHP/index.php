@@ -52,8 +52,31 @@ if(isset($_POST['btnSend']))
     $authorEmail=$_POST['emailAuthor'];
     $authorTelephone=$_POST['telAuthor'];
 
-
     //О соавторе
+    $authorSecondname2=$_POST['secondname2'];
+    $authorFirstname2=$_POST['firstname2'];
+    $authorMidlname2=$_POST['midlname2'];
+    $authorBirthdate2=$_POST['birthdate2'];
+    $authorCity2=$_POST['city2'];
+    $authorCountry2=$_POST['country2'];
+    $authorUniversityName2=$_POST['universityName2'];
+    if($authorUniversityName2=='другое')
+    {
+        $authorUniversityName2=$_POST['nameOtherUniversity2'];
+    }
+    $authorAbbreviatureUniver2=$_POST['abbreviatureUniver2'];
+    $authorStatusAuthor2=$_POST['statusAuthor2'];
+    $authorFacultyName2=$_POST['facultyName2'];
+    if($authorFacultyName=='Другое')
+    {
+        $authorFacultyName2=$_POST['nameOtherFaculty2'];
+    }
+    $authorCourse2=$_POST['courseAuthor2'];
+    $authorEmail2=$_POST['emailAuthor2'];
+    $authorTelephone2=$_POST['telAuthor2'];
+
+
+    //О 1 научном руководителе
     $secondnameSupervisor=$_POST['secondnameSupervisor'];
     $firstnameSupervisor=$_POST['firstnameSupervisor'];
     $midlenameSupervisor=$_POST['midlnameSupervisor'];
@@ -70,7 +93,7 @@ if(isset($_POST['btnSend']))
     $supervisorEmail=$_POST['emailSupervisor'];
     $supervisorTelephone=$_POST['telSupervisor'];
 
-    //О соавторе2
+    //О О 2 научном руководителе
     $secondnameSupervisor2=$_POST['secondnameSupervisor2'];
     $firstnameSupervisor2=$_POST['firstnameSupervisor2'];
     $midlenameSupervisor2=$_POST['midlnameSupervisor2'];
@@ -99,8 +122,8 @@ if(isset($_POST['btnSend']))
 
     $query="INSERT INTO reports (id_report, title_report, introduction, aim, materialsAndMethods,
                                 results, conclusions, id_contentReport, id_formParticipation,
-                                id_sections, id_language)
-            VALUES ('', '$titleOfPaper', '$introduction','$aim','$materialsAndMethods','$results','$conclusions','$contentsReport','$formParticipation','$section','$language');";
+                                id_sections)
+            VALUES ('', '$titleOfPaper', '$introduction','$aim','$materialsAndMethods','$results','$conclusions','$contentsReport','$formParticipation','$section');";
 
     $query .= "INSERT INTO boss (id_boss, firstnameBoss, secondnameBoss, midlnameBoss, id_scientificDegree, id_academicRanks, id_positionSupervisor,
                                 fullNameInstitute, name_department, city, email, telephone)
@@ -110,8 +133,20 @@ if(isset($_POST['btnSend']))
     $query .= "INSERT INTO boss (id_boss, firstnameBoss, secondnameBoss, midlnameBoss, id_scientificDegree, id_academicRanks, id_positionSupervisor,
                                 fullNameInstitute, name_department, city, email, telephone)
                 VALUES ('','$firstnameSupervisor2','$secondnameSupervisor2','$midlenameSupervisor2','$supervisorScientificDegree2','$supervisorAcademicRanks2',
-                        '$supervisorPosition2','$supervisorUniversityName2','$supervisorDepartment2','$supervisorCity2','$supervisorEmail2','$supervisorTelephone2')";
+                        '$supervisorPosition2','$supervisorUniversityName2','$supervisorDepartment2','$supervisorCity2','$supervisorEmail2','$supervisorTelephone2');";
 
+    $query .= "INSERT INTO users (id_user, firstnameUser, secondnameUser, midlenameUser, birthdate, city, country, fullNameInstitute, abbreviationInstitute, 
+                              id_status, nameFaculti, id_course, email, telephone) 
+            VALUES ('','$authorFirstname','$authorSecondname','$authorMidlname','$authorBirthdate', '$authorCity', '$authorCountry', '$authorUniversityName',
+                    '$authorAbbreviatureUniver','$authorStatusAuthor', '$authorFacultyName', '$authorCourse','$authorEmail','$authorTelephone');";
+
+    $query .= "INSERT INTO users (id_user, firstnameUser, secondnameUser, midlenameUser, birthdate, city, country, fullNameInstitute, abbreviationInstitute, 
+                              id_status, nameFaculti, id_course, email, telephone) 
+            VALUES ('','$authorFirstname2','$authorSecondname2','$authorMidlname2','$authorBirthdate2', '$authorCity2', '$authorCountry2', '$authorUniversityName2',
+                    '$authorAbbreviatureUniver2','$authorStatusAuthor2', '$authorFacultyName2', '$authorCourse2','$authorEmail2','$authorTelephone2')";
+
+
+    //'$last_id_boss1','$last_id_boss2', '$last_id_report'
     $result=mysqli_multi_query($dbc, $query)
         or die("Не удалось выполнить запрос");
     mysqli_close($dbc);
@@ -139,16 +174,22 @@ if(isset($_POST['btnSend']))
     $last_id_boss1=($last_id_boss2-1);
 
 
-    //Вставляю данные о авторе статьи на основании выше ид
+    $query="SELECT id_user FROM users ORDER BY id_user DESC LIMIT 1";
+    $res=mysqli_query($dbc, $query)
+    or die(" Не удалось извлечь ид user");
+    while($row=mysqli_fetch_array($res))
+    {
+        $last_id_user2=$row['id_user'];
+    }
+    $last_id_user1=($last_id_user2-1);
 
-    $query="INSERT INTO users (id_user, firstnameUser, secondnameUser, midlenameUser, birthdate, city, country, fullNameInstitute, abbreviationInstitute, 
-                              id_status, nameFaculti, id_course, email, telephone, id_firstBoss, id_secondBoss, id_report) 
-            VALUES ('','$authorFirstname','$authorSecondname','$authorMidlname','$authorBirthdate', '$authorCity', '$authorCountry', '$authorUniversityName',
-                    '$authorAbbreviatureUniver','$authorStatusAuthor', '$authorFacultyName', '$authorCourse','$authorEmail','$authorTelephone',
-                    '$last_id_boss1','$last_id_boss2', '$last_id_report')";
+
+    //Вставляю итоговые данные в промежуточную таблицу на основании выше ид
+
+    $query="INSERT INTO conference (id_conference, id_languages, id_report, id_user1, id_user2, id_boss1, id_boss2) 
+            VALUES ('', '$language', '$last_id_report','$last_id_user1','$last_id_user2','$last_id_boss1','$last_id_boss2')";
     $result=mysqli_query($dbc, $query)
-    or die("Не удалось выполнить запрос по добавлению автора");
-
+    or die("Не удалось выполнить запрос по добавлению данных в итоговую таблицу");
 
     include_once 'sendMail.php';
     include_once 'info.php';
@@ -309,9 +350,99 @@ if(isset($_POST['btnSend']))
             <input type="text" name="telAuthor" required pattern="^[0-9()\-+ ]{12,19}" title="Введите в формате +375-(33)-111-22-33"><br><br>
         </div>
 
+<!-- Информация о соавторе-->
+        <h1 id="aboutAuthor2"> Информация об соавторе (Information about the  second Author)</h1><hr><br>
+        <div id="aboutAuthor2">
+
+            <b> Фамилия автора (Author`s Surname):</b><br>
+            <input type="text" name="secondname2"  pattern="^[А-Я]{1}[а-яА-Я\-]{2,30}|[A-Z]{1}[a-zA-Z\-]{2,30}$" placeholder="Соколов"><br><br>
+
+            <b> Имя автора (Author`s Name):</b><br>
+            <input type="text" name="firstname2"  pattern="^[А-Я]{1}[а-яА-Я\-]{2,30}|[A-Z]{1}[a-zA-Z\-]{2,30}$" placeholder="Александр"><br><br>
+
+            <b> Отчество автора (Author`s Second name):</b><br>
+            <input type="text" name="midlname2"  pattern="^[А-Я]{1}[а-яА-Я\-]{2,30}|[A-Z]{1}[a-zA-Z\-]{2,30}$" placeholder="Александрович"><br><br>
+
+            <b> Дата рождения автора (Date of Birth):</b><br>
+            <input type="date" name="birthdate2" max="2007-01-01" min="1920-01-01"  title="Введите в формате: ГГГГ-ММ-ДД" placeholder="ГГГГ-ММ-ДД"><br><br>
+
+            <b> Город автора (City):</b><br>
+            <input type="text" name="city2" placeholder="Минск" pattern="^[А-Я]{1}[а-яА-Я\-\s]{2,40}|[A-Z]{1}[a-zA-Z\-\s]{2,40}$"><br><br>
+
+            <b> Страна автора (Country):</b><br>
+            <input type="text" name="country2" placeholder="Республика Беларусь" pattern="^[А-Я]{1}[а-яА-Я\-\s]{2,40}|[A-Z]{1}[a-zA-Z\-\s]{2,40}$"><br><br>
+
+            <b> Полное название учебного заведения/организации автора (Full name of the institution which the Author represent):</b><br>
+            <em class="hint">Пример (example): Белорусский государственный медицинский университет</em><br>
+            <input type="radio" name="universityName2" value="Белорусский государственный медицинский университет" ><em class="radioNameUniver"> Белорусский государственный медицинский университет</em><br>
+            <input type="radio" name="universityName2" value="другое" id="otherUniver1"><em class="radioNameUniver"> Другое:</em>
+            <input type="text" name="nameOtherUniversity2" pattern="^[А-Я]{1}[а-яА-Я\-\s]{5,300}|[A-Z]{1}[a-zA-Z\-\s]{5,300}$" id="otherUniver"> <br><br>
+
+            <b> Сокращенное название учебного заведения/организации автора (Abbreviation of the institution, which the Author represent):</b><br>
+            <input type="text" name="abbreviatureUniver2" placeholder="БГМУ" pattern="^[А-Я]{2,30}|[A-Z]{2,30}$"><br><br>
+
+            <b> Статус автора (Status of the author):</b><br>
+            <em class="hint"> На момент участия в Конференции</em><br>
+
+            <?php
+            $query="SELECT * FROM statuses";
+            $result=mysqli_query($dbc, $query)
+            or die ("Не удалось выполнить запрос");
+
+            echo'<select name="statusAuthor2" >';
+            while($row=mysqli_fetch_array($result))
+            {
+                echo '<option value="'.$row['id_status'].'">'.$row['name_status'].'</option>';
+            }
+            echo'</select>';
+            ?><br><br>
+
+            <b> Факультет автора (faculty of the Author):</b><br>
+            <em class="hint">Если Вы не являетесь студентом, выберите вариант ответа "Нет" (If you are not a student, select "No")</em><br>
+
+            <?php
+            $query="SELECT * FROM faculties";
+            $result=mysqli_query($dbc, $query)
+            or die ("Не удалось выполнить запрос");
+
+            while($row=mysqli_fetch_array($result))
+            {
+                echo'<br>';
+                echo'<input type="radio" name="facultyName2" value="'.$row['name_faculti'].'"><em class="radioNameUniver"> '.$row['name_faculti'].' </em>';
+            }
+            ?>
+
+            <input type="text" name="nameOtherFaculty2" pattern="^[А-Я]{1}[а-яА-Я\-\s]{3,150}|[A-Z]{1}[a-zA-Z\-\s]{3,150}$" id="otherUniver" placeholder="Нейронные сети"> <br><br>
 
 
-        <h1 id="secondAuthorLabel">Сведения о Соавторе<br>
+            <b> Курс автора (Course):</b><br>
+            <?php
+            $query="SELECT * FROM courses";
+            $result=mysqli_query($dbc, $query)
+            or die ("Не удалось выполнить запрос");
+
+            echo'<select name="courseAuthor2" >';
+            while($row=mysqli_fetch_array($result))
+            {
+                echo '<option value="'.$row['id_course'].'">'.$row['name_course'].'</option>';
+            }
+            echo'</select>';
+            ?><br><br>
+
+            <b> E-mail автора:</b><br>
+            <em class="hint">Ввнимание! Указанный Вами e-mail будет использован Оргкомитетом Конференции для обратной связи
+                (Attention! Your e-mail will be used by the Organizing Commitee of the Conference for feedback)</em><br>
+            <input type="email" name="emailAuthor2" placeholder="example@exam.ru"  pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"><br><br>
+
+            <b> Телефон автора (Telephone №):</b><br>
+            <em class="hint">+375*********</em><br>
+            <input type="text" name="telAuthor2"  pattern="^[0-9()\-+ ]{12,19}" title="Введите в формате +375-(33)-111-22-33"><br><br>
+        </div>
+
+
+
+
+        <h1 id="secondAuthorLabel">Сведения о научном руководителе<br>
             Information about the Second Author </h1>
         <div id="secondAuthor">
 
