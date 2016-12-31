@@ -25,51 +25,64 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="541" column="0" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
+            <state relative-caret-position="295">
+              <caret line="154" column="11" selection-start-line="154" selection-start-column="11" selection-end-line="154" selection-end-column="11" />
               <folding>
-                <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-                <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-                <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-                <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-                <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-                <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-                <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-                <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-                <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-                <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-                <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-                <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-                <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-                <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-                <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-                <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-                <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-                <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-                <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-                <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-                <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-                <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-                <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-                <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-                <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-                <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-                <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-                <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-                <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-                <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+                <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+                <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+                <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+                <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+                <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+                <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+                <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+                <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+                <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+                <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+                <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+                <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+                <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+                <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+                <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+                <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+                <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+                <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+                <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+                <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+                <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+                <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+                <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+                <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+                <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+                <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+                <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+                <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+                <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+                <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PHP/info.html">
+      <file leaf-file-name="sendMail.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PHP/sendMail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="92" column="9" selection-start-line="90" selection-start-column="0" selection-end-line="92" selection-end-column="9" />
+            <state relative-caret-position="17">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="info.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PHP/info.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#h2#0;n#td#0;n#tr#2;n#table#0;n#strong#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#td#1;n#tr#2;n#table#0;n#strong#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -133,6 +146,8 @@
         <option value="$PROJECT_DIR$/JS/scriptStyle.js" />
         <option value="$PROJECT_DIR$/CSS/style.css" />
         <option value="$PROJECT_DIR$/PHP/info.html" />
+        <option value="$PROJECT_DIR$/PHP/info.php" />
+        <option value="$PROJECT_DIR$/PHP/sendMail.php" />
         <option value="$PROJECT_DIR$/PHP/index.php" />
       </list>
     </option>
@@ -323,15 +338,15 @@
       <workItem from="1483127087035" duration="45000" />
       <workItem from="1483127368795" duration="5783000" />
       <workItem from="1483134025060" duration="1286000" />
-      <workItem from="1483174161511" duration="4065000" />
+      <workItem from="1483174161511" duration="6965000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60597000" />
+    <option name="totallyTimeSpent" value="63497000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15416667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -377,46 +392,49 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-            <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-            <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-            <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-            <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-            <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-            <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-            <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-            <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-            <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+            <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+            <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+            <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+            <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+            <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+            <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+            <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+            <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+            <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+            <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/info.html">
+    <entry file="file://$PROJECT_DIR$/PHP/info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#h2#0;n#td#0;n#tr#2;n#table#0;n#strong#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#td#1;n#tr#2;n#table#0;n#strong#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -455,46 +473,49 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-            <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-            <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-            <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-            <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-            <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-            <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-            <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-            <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-            <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+            <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+            <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+            <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+            <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+            <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+            <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+            <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+            <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+            <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+            <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/info.html">
+    <entry file="file://$PROJECT_DIR$/PHP/info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#h2#0;n#td#0;n#tr#2;n#table#0;n#strong#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#td#1;n#tr#2;n#table#0;n#strong#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -533,36 +554,40 @@
         <state relative-caret-position="1938">
           <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="115" selection-end-column="36" />
           <folding>
-            <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-            <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-            <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-            <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-            <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-            <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-            <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-            <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-            <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-            <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+            <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+            <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+            <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+            <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+            <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+            <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+            <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+            <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+            <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+            <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
           </folding>
         </state>
       </provider>
@@ -599,36 +624,40 @@
         <state relative-caret-position="1938">
           <caret line="114" column="0" selection-start-line="114" selection-start-column="2" selection-end-line="115" selection-end-column="36" />
           <folding>
-            <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-            <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-            <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-            <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-            <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-            <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-            <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-            <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-            <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-            <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+            <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+            <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+            <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+            <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+            <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+            <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+            <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+            <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+            <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+            <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
           </folding>
         </state>
       </provider>
@@ -665,36 +694,40 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-            <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-            <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-            <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-            <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-            <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-            <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-            <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-            <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-            <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+            <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+            <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+            <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+            <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+            <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+            <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+            <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+            <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+            <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+            <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
           </folding>
         </state>
       </provider>
@@ -720,36 +753,40 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-            <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-            <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-            <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-            <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-            <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-            <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-            <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-            <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-            <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+            <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+            <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+            <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+            <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+            <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+            <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+            <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+            <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+            <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+            <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
           </folding>
         </state>
       </provider>
@@ -775,36 +812,40 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-            <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-            <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-            <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-            <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-            <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-            <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-            <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-            <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-            <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+            <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+            <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+            <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+            <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+            <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+            <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+            <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+            <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+            <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+            <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
           </folding>
         </state>
       </provider>
@@ -830,36 +871,40 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-            <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-            <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-            <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-            <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-            <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-            <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-            <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-            <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-            <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+            <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+            <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+            <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+            <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+            <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+            <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+            <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+            <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+            <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+            <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
           </folding>
         </state>
       </provider>
@@ -885,36 +930,40 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-            <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-            <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-            <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-            <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-            <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-            <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-            <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-            <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-            <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+            <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+            <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+            <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+            <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+            <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+            <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+            <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+            <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+            <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+            <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
           </folding>
         </state>
       </provider>
@@ -932,36 +981,40 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-            <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-            <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-            <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-            <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-            <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-            <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-            <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-            <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-            <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+            <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+            <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+            <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+            <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+            <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+            <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+            <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+            <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+            <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+            <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
           </folding>
         </state>
       </provider>
@@ -1003,53 +1056,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PHP/info.html">
+    <entry file="file://$PROJECT_DIR$/PHP/info.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="92" column="9" selection-start-line="90" selection-start-column="0" selection-end-line="92" selection-end-column="9" />
+        <state relative-caret-position="85">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#h2#0;n#td#0;n#tr#2;n#table#0;n#strong#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#td#1;n#tr#2;n#table#0;n#strong#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PHP/sendMail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PHP/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="541" column="0" selection-start-line="541" selection-start-column="0" selection-end-line="541" selection-end-column="0" />
+        <state relative-caret-position="295">
+          <caret line="154" column="11" selection-start-line="154" selection-start-column="11" selection-end-line="154" selection-end-column="11" />
           <folding>
-            <marker date="1483178148780" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
-            <marker date="1483178148780" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
-            <marker date="1483178148780" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
-            <marker date="1483178148780" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
-            <marker date="1483178148780" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
-            <marker date="1483178148780" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
-            <marker date="1483178148780" expanded="true" signature="7084:7107" placeholder="SELECT * FRO... languages" />
-            <marker date="1483178148780" expanded="true" signature="11528:11550" placeholder="SELECT * FRO... statuses" />
-            <marker date="1483178148780" expanded="true" signature="12183:12206" placeholder="SELECT * FRO... faculties" />
-            <marker date="1483178148780" expanded="true" signature="12853:12874" placeholder="SELECT * FRO... courses" />
-            <marker date="1483178148780" expanded="true" signature="15279:15309" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="15910:15937" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="16521:16553" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="19958:19988" placeholder="SELECT * FRO... scientificDegree" />
-            <marker date="1483178148780" expanded="true" signature="20582:20609" placeholder="SELECT * FRO... academicRanks" />
-            <marker date="1483178148780" expanded="true" signature="21186:21218" placeholder="SELECT * FRO... positionSupervisor" />
-            <marker date="1483178148780" expanded="true" signature="23918:23940" placeholder="SELECT * FRO... sections" />
-            <marker date="1483178148780" expanded="true" signature="24477:24508" placeholder="SELECT * FRO... formParticipation" />
-            <marker date="1483178148780" expanded="true" signature="25077:25105" placeholder="SELECT * FRO... contentsReport" />
+            <element signature="n#div#7;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#h1#1;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#8;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1483185748741" expanded="false" signature="3347:3608" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3609" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3610" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3625" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3648" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3347:3760" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:3764" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4953" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="true" signature="3763:4985" placeholder="INSERT INTO reports... " />
+            <marker date="1483185748741" expanded="false" signature="3780:4319" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="false" signature="4339:4889" placeholder="INSERT INTO boss... " />
+            <marker date="1483185748741" expanded="true" signature="5183:5212" placeholder="SELECT MAX(i... reports" />
+            <marker date="1483185748741" expanded="true" signature="5183:5244" placeholder="SELECT id_re... reports" />
+            <marker date="1483185748741" expanded="true" signature="5445:5499" placeholder="SELECT id_bo... boss" />
+            <marker date="1483185748741" expanded="true" signature="5787:6393" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6409" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="5787:6429" placeholder="INSERT INTO users... " />
+            <marker date="1483185748741" expanded="true" signature="7158:7181" placeholder="SELECT * FRO... languages" />
+            <marker date="1483185748741" expanded="true" signature="11602:11624" placeholder="SELECT * FRO... statuses" />
+            <marker date="1483185748741" expanded="true" signature="12257:12280" placeholder="SELECT * FRO... faculties" />
+            <marker date="1483185748741" expanded="true" signature="12927:12948" placeholder="SELECT * FRO... courses" />
+            <marker date="1483185748741" expanded="true" signature="15353:15383" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="15984:16011" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="16595:16627" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="20032:20062" placeholder="SELECT * FRO... scientificDegree" />
+            <marker date="1483185748741" expanded="true" signature="20656:20683" placeholder="SELECT * FRO... academicRanks" />
+            <marker date="1483185748741" expanded="true" signature="21260:21292" placeholder="SELECT * FRO... positionSupervisor" />
+            <marker date="1483185748741" expanded="true" signature="23992:24014" placeholder="SELECT * FRO... sections" />
+            <marker date="1483185748741" expanded="true" signature="24551:24582" placeholder="SELECT * FRO... formParticipation" />
+            <marker date="1483185748741" expanded="true" signature="25151:25179" placeholder="SELECT * FRO... contentsReport" />
           </folding>
         </state>
       </provider>

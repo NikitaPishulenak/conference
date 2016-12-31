@@ -150,6 +150,9 @@ if(isset($_POST['btnSend']))
     or die("Не удалось выполнить запрос по добавлению автора");
 
 
+    include_once 'sendMail.php';
+    include_once 'info.php';
+    exit();
 
 }
 
@@ -536,7 +539,7 @@ if(isset($_POST['btnSend']))
 
 
 
-        <button  type="submit" name="btnSend" ><a href="info.html">Отправить</a></button><br><br>
+        <button  type="submit" name="btnSend" >Отправить</button><br><br>
 
         </div>
 </form>
