@@ -146,7 +146,6 @@ if(isset($_POST['btnSend']))
                     '$authorAbbreviatureUniver2','$authorStatusAuthor2', '$authorFacultyName2', '$authorCourse2','$authorEmail2','$authorTelephone2')";
 
 
-    //'$last_id_boss1','$last_id_boss2', '$last_id_report'
     $result=mysqli_multi_query($dbc, $query)
         or die("Не удалось выполнить запрос");
     mysqli_close($dbc);

@@ -1,0 +1,39 @@
+SELECT L.name_language, R.title_report, U.secondnameUser, U.firstnameUser, U.midlenameUser, U.birthdate, U.city, U.country, U.fullNameInstitute, U.abbreviationInstitute, S.name_status, U.nameFaculti, courses.name_course, U.email, U.telephone, 
+
+U2.secondnameUser, U2.firstnameUser, U2.midlenameUser, U2.birthdate, U2.city, U2.country, U2.fullNameInstitute, U2.abbreviationInstitute, S2.name_status, U2.nameFaculti, cours.name_course, U2.email, U2.telephone, 
+
+B.secondnameBoss, B.firstnameBoss, B.midlnameBoss, SD.name_scientificDegree,AR.name_academicRanks,PS.name_positionSupervisor, B.fullNameInstitute, B.name_department,B.city, B.email, B.telephone,
+
+B2.secondnameBoss, B2.firstnameBoss, B2.midlnameBoss, SD2.name_scientificDegree,AR2.name_academicRanks,PS2.name_positionSupervisor, B2.fullNameInstitute, B2.name_department,B2.city, B2.email, B2.telephone,
+
+sections.name_section, formParticipation.name_formParticipation, contentsReport.name_contentsReport
+
+
+FROM languages AS L
+INNER JOIN conference AS C on (C.id_languages=L.id_language)
+INNER JOIN users AS U ON (C.id_user1=U.id_user)
+INNER JOIN reports AS R ON (R.id_report=C.id_report) 
+INNER JOIN statuses AS S ON (S.id_status=U.id_status)
+INNER JOIN courses ON (courses.id_course=U.id_course)
+
+INNER JOIN users AS U2 ON (U2.id_user=C.id_user2)
+INNER JOIN statuses AS S2 ON (S2.id_status=U2.id_status)
+INNER JOIN courses AS cours ON (cours.id_course=U2.id_course)
+
+INNER JOIN boss AS B ON (B.id_boss=C.id_boss1) 
+INNER JOIN scientificDegree AS SD ON (SD.id_scientificDegree=B.id_scientificDegree)
+INNER JOIN academicRanks AS AR ON (AR.id_academicRanks=B.id_academicRanks)
+INNER JOIN positionSupervisor AS PS ON (PS.id_positionSupervisor=B.id_positionSupervisor)
+
+INNER JOIN boss AS B2 ON (B2.id_boss=C.id_boss2) 
+INNER JOIN scientificDegree AS SD2 ON (SD2.id_scientificDegree=B2.id_scientificDegree)
+INNER JOIN academicRanks AS AR2 ON (AR2.id_academicRanks=B2.id_academicRanks)
+INNER JOIN positionSupervisor AS PS2 ON (PS2.id_positionSupervisor=B2.id_positionSupervisor)
+
+INNER JOIN sections ON (sections.id_section=R.id_sections)
+INNER JOIN formParticipation ON (formParticipation.id_formParticipation=R.id_formParticipation)
+INNER JOIN contentsReport ON (contentsReport.id_contentsReport=R.id_contentReport)
+
+
+
+

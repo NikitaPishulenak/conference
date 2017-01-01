@@ -1,6 +1,5 @@
 <?php
-//$to  = "niki1995-11@mail.ru" ;
-
+$to=$
 $subject = "Вы прошли регистрацию!/You have been registered!";
 
 $message = 'Уважаемый участник! 
