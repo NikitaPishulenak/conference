@@ -190,6 +190,7 @@ if(isset($_POST['btnSend']))
     $result=mysqli_query($dbc, $query)
     or die("Не удалось выполнить запрос по добавлению данных в итоговую таблицу");
 
+    mysqli_close($dbc);
     include_once 'sendMail.php';
     include_once 'info.php';
     exit();

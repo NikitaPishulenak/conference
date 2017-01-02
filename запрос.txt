@@ -33,7 +33,3 @@ INNER JOIN positionSupervisor AS PS2 ON (PS2.id_positionSupervisor=B2.id_positio
 INNER JOIN sections ON (sections.id_section=R.id_sections)
 INNER JOIN formParticipation ON (formParticipation.id_formParticipation=R.id_formParticipation)
 INNER JOIN contentsReport ON (contentsReport.id_contentsReport=R.id_contentReport)
-
-
-
-
