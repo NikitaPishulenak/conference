@@ -7,6 +7,14 @@
 </head>
 <body>
 <?php
+
+function clearFolder($dir) {
+    if (file_exists($dir))
+        foreach (glob($dir) as $file)
+            unlink($file);
+}
+
+
 if(isset($_POST['selectResults']))
 {
     include_once 'connect.php';
@@ -15,18 +23,38 @@ if(isset($_POST['selectResults']))
 
     $date= date("j-M-G-i-s");
     $nameFolder="$date.csv";
-    $folder="D://Conference";
+    $folder="C://OpenServer/domains/localhost/conference/PHP/ConferenceData";
 
-    $query2="SELECT id_section FROM sections LIMIT 4";
+    $query2="SELECT id_section FROM sections LIMIT 75";
     $result2=mysqli_query($dbc, $query2)
-        or die ("Не удалось извлечь название папок");
+        or die ("Не удалось извлечь id папок");
+
+    $query3="SELECT name_sectionName FROM sectionsName LIMIT 75";
+    $result3=mysqli_query($dbc, $query3)
+    or die ("Не удалось извлечь название папок");
+
+    $titleFolders=array();
+    $titleFolders[0]="example";
+
+    while($row3=mysqli_fetch_assoc($result3))
+    {
+        $titleFolders[]=$row3['name_sectionName'];
+        if (is_dir($folder.$row3['name_sectionName'])){
+                clearFolder($folder.$row3['name_sectionName']);
+        }
+        else {
+            //echo "Если хотите переписать данные удалите директорию ConferenceData";
+            mkdir('ConferenceData/'.$row3['name_sectionName'].'',0777, true);
+        }
+    }
+
+    //print_r($titleFolders);
+
     while($row2=mysqli_fetch_array($result2))
     {
         $section=$row2['id_section'];
-        echo $section."-";
-
     }
-    echo '<br>'.$section.ob_get_length();
+//    echo '<br>'.$section.ob_get_length();
 
     for ($i=1; $i<=$section.ob_get_length(); $i++)
     {
@@ -47,7 +75,7 @@ if(isset($_POST['selectResults']))
 
                     SEC.name_section, formParticipation.name_formParticipation, contentsReport.name_contentsReport
 
-                    INTO OUTFILE '$folder/$i/$nameFolder'
+                    INTO OUTFILE '$folder/$titleFolders[$i]/$nameFolder'
                     FIELDS TERMINATED BY ';' OPTIONALLY ENCLOSED BY '\"'
                     LINES TERMINATED BY '' TERMINATED BY '\r\n'
 
@@ -80,8 +108,15 @@ if(isset($_POST['selectResults']))
                     
                     )";
 
-        $result=mysqli_query($dbc, $query)
-        or die("Запрос не выполнен");
+        $result=mysqli_query($dbc, $query);
+        if(!isset($result))
+        {
+            echo "Запрос не выполнен $folder/$titleFolders[$i]/$nameFolder <br>";
+        }
+       else
+       {
+           echo" Создана директория $folder/$titleFolders[$i]/$nameFolder <br>";
+       }
     }
 
 
@@ -94,10 +129,12 @@ if(isset($_POST['selectResults']))
 
 ?>
 
+<div id="conteiner">
+    <form method="post" action="">
+        <input type="submit" name="selectResults" value="Извлечь данные">
+    </form>
+</div>
 
-<form method="post" action="">
-    <input type="submit" name="selectResults" value="Извлечь данные">
-</form>
 
 </body>
 </html>

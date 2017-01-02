@@ -71,14 +71,15 @@
       <file leaf-file-name="selectResults.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PHP/selectResults.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+            <state relative-caret-position="391">
+              <caret line="56" column="0" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="43" />
               <folding>
-                <marker date="1483381431726" expanded="true" signature="450:481" placeholder="SELECT id_se... sections" />
-                <marker date="1483381431726" expanded="true" signature="450:489" placeholder="SELECT id_se... sections" />
-                <marker date="1483381431726" expanded="true" signature="827:4196" placeholder="SELECT 'Рабо... " />
-                <marker date="1483381431726" expanded="true" signature="827:7272" placeholder="SELECT 'Рабо... " />
-                <marker date="1483381431726" expanded="true" signature="4228:7229" placeholder="SELECT L.nam... " />
+                <marker date="1483394788722" expanded="true" signature="624:655" placeholder="SELECT id_se... sections" />
+                <marker date="1483394788722" expanded="true" signature="624:664" placeholder="SELECT id_se... sections" />
+                <marker date="1483394788722" expanded="true" signature="770:820" placeholder="SELECT name_... sectionsName" />
+                <marker date="1483394788722" expanded="true" signature="1649:5018" placeholder="SELECT 'Рабо... " />
+                <marker date="1483394788722" expanded="true" signature="1649:8109" placeholder="SELECT 'Рабо... " />
+                <marker date="1483394788722" expanded="true" signature="5050:8066" placeholder="SELECT L.nam... " />
               </folding>
             </state>
           </provider>
@@ -168,7 +169,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1452" />
+    <option name="width" value="1444" />
     <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -272,8 +273,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,18 +350,19 @@
       <workItem from="1483293221150" duration="143000" />
       <workItem from="1483293386599" duration="7000" />
       <workItem from="1483352180502" duration="1833000" />
-      <workItem from="1483375108982" duration="6322000" />
+      <workItem from="1483375108982" duration="7867000" />
+      <workItem from="1483388023792" duration="6079000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77883000" />
+    <option name="totallyTimeSpent" value="85507000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1452" height="876" extended-state="1" />
+    <frame x="-8" y="-8" width="1444" height="876" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.158078" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15756303" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1168,14 +1170,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PHP/selectResults.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        <state relative-caret-position="391">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="43" />
           <folding>
-            <marker date="1483381431726" expanded="true" signature="450:481" placeholder="SELECT id_se... sections" />
-            <marker date="1483381431726" expanded="true" signature="450:489" placeholder="SELECT id_se... sections" />
-            <marker date="1483381431726" expanded="true" signature="827:4196" placeholder="SELECT 'Рабо... " />
-            <marker date="1483381431726" expanded="true" signature="827:7272" placeholder="SELECT 'Рабо... " />
-            <marker date="1483381431726" expanded="true" signature="4228:7229" placeholder="SELECT L.nam... " />
+            <marker date="1483394788722" expanded="true" signature="624:655" placeholder="SELECT id_se... sections" />
+            <marker date="1483394788722" expanded="true" signature="624:664" placeholder="SELECT id_se... sections" />
+            <marker date="1483394788722" expanded="true" signature="770:820" placeholder="SELECT name_... sectionsName" />
+            <marker date="1483394788722" expanded="true" signature="1649:5018" placeholder="SELECT 'Рабо... " />
+            <marker date="1483394788722" expanded="true" signature="1649:8109" placeholder="SELECT 'Рабо... " />
+            <marker date="1483394788722" expanded="true" signature="5050:8066" placeholder="SELECT L.nam... " />
           </folding>
         </state>
       </provider>

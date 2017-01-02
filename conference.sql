@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 02 2017 г., 13:45
+-- Время создания: Янв 03 2017 г., 01:09
 -- Версия сервера: 5.5.50
 -- Версия PHP: 5.3.29
 
@@ -74,17 +74,18 @@ CREATE TABLE IF NOT EXISTS `boss` (
   `city` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `telephone` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `boss`
 --
 
 INSERT INTO `boss` (`id_boss`, `firstnameBoss`, `secondnameBoss`, `midlnameBoss`, `id_scientificDegree`, `id_academicRanks`, `id_positionSupervisor`, `fullNameInstitute`, `name_department`, `city`, `email`, `telephone`) VALUES
-(1, 'Игорь', 'Алексеев', 'Степанович', 18, 3, 20, 'Белорусский государственный университет информатики и радиоэлектроники', 'Программное Обеспечение Информационных технологий', 'Брест', 'kon@mail.ru', ''),
-(2, '', '', '', 1, 1, 1, '', '', '', '', ''),
 (3, 'Лия', 'Серебряная', 'Валентиновна', 33, 4, 3, 'Белорусский государственный медицинский университет', 'Терапии', 'Минск', 'ser@yandex.com', '375294536655'),
-(4, '', '', '', 1, 1, 1, '', '', '', '', '');
+(4, '', '', '', 1, 1, 1, '', '', '', '', ''),
+(5, 'ggg', 'ggg', 'ggg', 3, 6, 3, 'wewefdew', 'fefwef', 'wef', '', ''),
+(6, 'Лия', 'Серебряная', 'Валентиновна', 1, 1, 1, 'Белорусский государственный медицинский университет', 'Предприятие', 'Минск', 'kon@mail.ru', '375778567734'),
+(7, '', '', '', 1, 1, 1, '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -100,15 +101,16 @@ CREATE TABLE IF NOT EXISTS `conference` (
   `id_user2` int(10) NOT NULL,
   `id_boss1` int(10) NOT NULL,
   `id_boss2` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `conference`
 --
 
 INSERT INTO `conference` (`id_conference`, `id_languages`, `id_report`, `id_user1`, `id_user2`, `id_boss1`, `id_boss2`) VALUES
-(1, 2, 1, 1, 2, 1, 2),
-(2, 1, 2, 2, 3, 3, 4);
+(2, 1, 2, 2, 3, 3, 4),
+(3, 2, 2, 6, 6, 5, 4),
+(4, 1, 3, 7, 8, 6, 7);
 
 -- --------------------------------------------------------
 
@@ -276,15 +278,15 @@ CREATE TABLE IF NOT EXISTS `reports` (
   `id_contentReport` int(10) NOT NULL,
   `id_formParticipation` int(10) NOT NULL,
   `id_sections` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `reports`
 --
 
 INSERT INTO `reports` (`id_report`, `title_report`, `introduction`, `aim`, `materialsAndMethods`, `results`, `conclusions`, `id_contentReport`, `id_formParticipation`, `id_sections`) VALUES
-(1, 'Нервная система', 'Введен', 'Цели', 'Материалы', 'Получилось))', 'Хочц еще', 2, 2, 58),
-(2, 'Нарушение сгибательной функции', 'Первое', 'Второе', 'Третье', 'Четвертое', 'Пятое', 1, 3, 2);
+(2, 'Нарушение сгибательной функции', 'Первое', 'Второе', 'Третье', 'Четвертое', 'Пятое', 1, 3, 75),
+(3, 'Заболевание аорты', 'какакака', 'кака', 'какака', 'какака', 'каукаука', 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -357,8 +359,8 @@ CREATE TABLE IF NOT EXISTS `sections` (
 --
 
 INSERT INTO `sections` (`id_section`, `name_section`) VALUES
-(1, 'Акушерство и гинекология/Obstetrics and Gynecology'),
-(2, 'Анатомия человека/Human anatomy'),
+(1, 'Акушерство и гинекология(Obstetrics and Gynecology)'),
+(2, 'Анатомия человека(Human anatomy)'),
 (3, 'Анестезиология и реаниматология/Anesthesiology and Reanimatology  '),
 (4, 'Биологическая химия/Biological Chemistry'),
 (5, 'Биоорганическая химия/Bioorganic Chemistry'),
@@ -431,8 +433,99 @@ INSERT INTO `sections` (`id_section`, `name_section`) VALUES
 (72, 'Хирургические болезни/Surgery'),
 (73, 'Челюстно-лицевая хирургия/Maxillofacial Surgery'),
 (74, 'Эндокринология/Endocrinology'),
-(75, 'Эпидемиология/Epidemiology'),
-(76, 'Оригиналы протезов');
+(75, 'Эпидемиология/Epidemiology');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `sectionsName`
+--
+
+CREATE TABLE IF NOT EXISTS `sectionsName` (
+  `id_sectionName` int(10) NOT NULL,
+  `name_sectionName` varchar(100) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `sectionsName`
+--
+
+INSERT INTO `sectionsName` (`id_sectionName`, `name_sectionName`) VALUES
+(1, 'Obstetrics and Gynecology'),
+(2, 'Human anatomy'),
+(3, 'Anesthesiology and Reanimatology  '),
+(4, 'Biological Chemistry'),
+(5, 'Bioorganic Chemistry'),
+(6, 'Biotechnology'),
+(7, 'Otorhinolaryngology'),
+(8, 'Internal Diseases'),
+(9, 'Military Epidemiology and military hygiene'),
+(10, 'Military field therapy'),
+(11, 'Military surgery'),
+(12, 'Hematology'),
+(13, 'Health of children and teenagers'),
+(14, 'Occupational health'),
+(15, 'Histology, Cytology and Embryology'),
+(16, 'Ophthalmology'),
+(17, 'Dermatology'),
+(18, 'Pediatric Surgery'),
+(19, 'Childrens infectious diseases'),
+(20, 'Foreign languages'),
+(21, 'Infectious diseases'),
+(22, 'History of Medicine'),
+(23, 'Cardiology'),
+(24, 'Clinical immunology'),
+(25, 'Clinical pharmacology'),
+(26, 'Communal dentistry'),
+(27, 'Latin'),
+(28, 'Radiation diagnostics and radiotherapy'),
+(29, 'Medical Biology and General Genetics'),
+(30, 'Medical and Biological Physics'),
+(31, 'Medical rehabilitation and physiotherapy'),
+(32, 'Microbiology, Virology and Immunology'),
+(33, 'Human Morphology'),
+(34, 'Nanobiology'),
+(35, 'Neurology and Neurosurgery'),
+(36, 'Normal Physiology'),
+(37, 'General hygiene'),
+(38, 'General Dentistry'),
+(39, 'General chemistry and computational biology'),
+(40, 'General Surgery'),
+(41, 'Public Health and Health Care'),
+(42, 'Oncology'),
+(43, 'Organisation of medical support and  extreme medicine'),
+(44, 'Operative surgery and topographic anatomy'),
+(45, 'Organization of Pharmacy'),
+(46, 'Orthodontics'),
+(47, 'Orthopedic dentistry'),
+(48, 'Pathoanatomy'),
+(49, 'Pathological physiology'),
+(50, 'Pediatrics'),
+(51, 'Outpatient therapy'),
+(52, 'Propaedeutics of Internal Diseases'),
+(53, 'Propaedeutics of childhood diseases'),
+(54, 'Psychiatry and Medical  Psychology'),
+(55, 'Radiation Medicine and Ecology'),
+(56, 'Cardiovascular Surgery'),
+(57, 'Sports medicine'),
+(58, 'Steam Cells'),
+(59, 'Pediatric dentistry'),
+(60, 'Forensic Medicine'),
+(61, 'Therapeutic Dentistry'),
+(62, 'Traumatology and Orthopedics'),
+(63, 'Transplantation'),
+(64, 'Urology'),
+(65, 'Pharmacology'),
+(66, 'Pharmaceutical botany'),
+(67, 'Pharmaceutical Technology and Chemistry'),
+(68, 'Philology'),
+(69, 'Philosophy, political science, sociology, bioethics and history of Belarus'),
+(70, 'Phtisiopneumology'),
+(71, 'Surgical dentistry'),
+(72, 'Surgery'),
+(73, 'Maxillofacial Surgery'),
+(74, 'Endocrinology'),
+(75, 'Epidemiology');
 
 -- --------------------------------------------------------
 
@@ -488,17 +581,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id_course` int(10) NOT NULL,
   `email` varchar(100) NOT NULL,
   `telephone` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `users`
 --
 
 INSERT INTO `users` (`id_user`, `firstnameUser`, `secondnameUser`, `midlenameUser`, `birthdate`, `city`, `country`, `fullNameInstitute`, `abbreviationInstitute`, `id_status`, `nameFaculti`, `id_course`, `email`, `telephone`) VALUES
-(1, 'Никита', 'Пищуленок', 'Александрович', '1995-09-29', 'Лепель', 'Республика Беларусь', 'Белорусский государственный университет информатики и радиоэлектроники', 'БГУИР', 8, 'Компьютерные системы и сети', 5, 'niki@mail.ru', '375336111923'),
-(2, 'Александр', 'Мотарыкин', 'Олеговтч', '1995-05-11', 'Минск', 'Республика Беларусь', 'Белорусский государственный медицинский университет', 'БГМУ', 7, '-Нет/No-', 7, 'orwester@gmail.com', '375448670525'),
-(3, 'Иван', 'Метельский', 'Олегович', '1995-12-19', 'Минск', 'Республика Беларусь', 'Белорусский государственный университет информатики и радиоэлектроники', 'БГУИР', 1, '', 4, 'metla@mail.ru', '+375294466943'),
-(4, 'Екатерина', 'Рунец', 'Сергеевна', '1994-11-12', 'Молодечно', 'Республика Беларусь', 'Белорусский государственный университет', 'БГУ', 1, 'Другое', 3, 'katya@gmail.com', '');
+(2, 'Иван', 'Метельский', 'Олегович', '1995-12-19', 'Минск', 'Республика Беларусь', 'Белорусский государственный университет информатики и радиоэлектроники', 'БГУИР', 1, '', 4, 'metla@mail.ru', '+375294466943'),
+(3, 'Екатерина', 'Рунец', 'Сергеевна', '1994-11-12', 'Молодечно', 'Республика Беларусь', 'Белорусский государственный университет', 'БГУ', 1, 'Другое', 3, 'katya@gmail.com', ''),
+(6, 'ник', 'ник', 'ник', '2017-01-03', 'ник', 'ник', 'ник', 'ник', 2, 'ник', 3, 'nik', '4534453454354'),
+(7, 'Никита', 'Метельский', 'Олегович', '1994-10-29', 'Минск', 'Республика Беларусь', 'Белорусский государственный университет информатики и радиоэлектроники', 'БГУИР', 11, 'Вычислительные машины', 5, 'metla@mail.ru', '375336112211'),
+(8, 'Екатерина', 'Рунец', 'Сергеевна', '1994-11-12', 'Молодечно', 'Республика Беларусь', 'Белорусский государственный университет', 'БГУ', 16, '-Нет/No-', 7, 'katya@gmail.com', '');
 
 --
 -- Индексы сохранённых таблиц
@@ -573,8 +667,8 @@ ALTER TABLE `positionSupervisor`
 ALTER TABLE `reports`
   ADD PRIMARY KEY (`id_report`),
   ADD KEY `id_contentReport` (`id_contentReport`),
-  ADD KEY `id_contentReport_2` (`id_contentReport`),
-  ADD KEY `id_contentReport_3` (`id_contentReport`,`id_formParticipation`,`id_sections`);
+  ADD KEY `id_formParticipation` (`id_formParticipation`),
+  ADD KEY `id_sections` (`id_sections`);
 
 --
 -- Индексы таблицы `scientificDegree`
@@ -587,6 +681,12 @@ ALTER TABLE `scientificDegree`
 --
 ALTER TABLE `sections`
   ADD PRIMARY KEY (`id_section`);
+
+--
+-- Индексы таблицы `sectionsName`
+--
+ALTER TABLE `sectionsName`
+  ADD PRIMARY KEY (`id_sectionName`);
 
 --
 -- Индексы таблицы `statuses`
@@ -615,12 +715,12 @@ ALTER TABLE `academicRanks`
 -- AUTO_INCREMENT для таблицы `boss`
 --
 ALTER TABLE `boss`
-  MODIFY `id_boss` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id_boss` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT для таблицы `conference`
 --
 ALTER TABLE `conference`
-  MODIFY `id_conference` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id_conference` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT для таблицы `contentsReport`
 --
@@ -655,7 +755,7 @@ ALTER TABLE `positionSupervisor`
 -- AUTO_INCREMENT для таблицы `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `id_report` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id_report` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT для таблицы `scientificDegree`
 --
@@ -667,6 +767,11 @@ ALTER TABLE `scientificDegree`
 ALTER TABLE `sections`
   MODIFY `id_section` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=77;
 --
+-- AUTO_INCREMENT для таблицы `sectionsName`
+--
+ALTER TABLE `sectionsName`
+  MODIFY `id_sectionName` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=76;
+--
 -- AUTO_INCREMENT для таблицы `statuses`
 --
 ALTER TABLE `statuses`
@@ -675,7 +780,7 @@ ALTER TABLE `statuses`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
