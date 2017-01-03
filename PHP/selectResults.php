@@ -8,10 +8,25 @@
 <body>
 <?php
 
-function clearFolder($dir) {
-    if (file_exists($dir))
-        foreach (glob($dir) as $file)
-            unlink($file);
+function dirDel ($dir)
+{
+    $d=opendir($dir);
+    while(($entry=readdir($d))!==false)
+    {
+        if ($entry != "." && $entry != "..")
+        {
+            if (is_dir($dir."/".$entry))
+            {
+                dirDel($dir."/".$entry);
+            }
+            else
+            {
+                unlink ($dir."/".$entry);
+            }
+        }
+    }
+    closedir($d);
+    rmdir ($dir);
 }
 
 
@@ -24,6 +39,7 @@ if(isset($_POST['selectResults']))
     $date= date("j-M-G-i-s");
     $nameFolder="$date.csv";
     $folder="C://OpenServer/domains/localhost/conference/PHP/ConferenceData";
+    $fol="ConferenceData";
 
     $query2="SELECT id_section FROM sections LIMIT 75";
     $result2=mysqli_query($dbc, $query2)
@@ -39,15 +55,18 @@ if(isset($_POST['selectResults']))
     while($row3=mysqli_fetch_assoc($result3))
     {
         $titleFolders[]=$row3['name_sectionName'];
-        if (is_dir($folder.$row3['name_sectionName'])){
-                clearFolder($folder.$row3['name_sectionName']);
+        if (is_dir($fol.$row3['name_sectionName'])){
+                //dirDel($fol.$row3['name_sectionName']);
+                //echo ' Папка '.$fol.$row3['name_sectionName'].' уничтожена';
         }
-        else {
-            //echo "Если хотите переписать данные удалите директорию ConferenceData";
+        else
+        {
             mkdir('ConferenceData/'.$row3['name_sectionName'].'',0777, true);
         }
+
     }
 
+    //echo "<br>.Смотри.<br>";
     //print_r($titleFolders);
 
     while($row2=mysqli_fetch_array($result2))
@@ -104,7 +123,7 @@ if(isset($_POST['selectResults']))
                     INNER JOIN formParticipation ON (formParticipation.id_formParticipation=R.id_formParticipation)
                     INNER JOIN contentsReport ON (contentsReport.id_contentsReport=R.id_contentReport)
                     
-                    WHERE id_section='$i'
+                    WHERE SEC.id_section='$i'
                     
                     )";
 
