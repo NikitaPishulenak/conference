@@ -1,5 +1,4 @@
 <?php
-//$to=$
 $subject = "Вы прошли регистрацию!/You have been registered!";
 
 $message = 'Уважаемый участник! 

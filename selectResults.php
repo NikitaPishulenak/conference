@@ -35,7 +35,6 @@ if(isset($_POST['selectResults']))
     include_once 'connect.php';
     $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
         or die ("Соединение не установлено");
-    //mysqli_query($dbc,'SET NAMES utf8');
     mysqli_query($dbc,"SET NAMES 'UTF8'");
 
     $date= date("j-M-G-i-s");
@@ -126,14 +125,14 @@ if(isset($_POST['selectResults']))
                     )";
 
         $result=mysqli_query($dbc, $query);
-        if(!isset($result))
-        {
-            echo "Запрос не выполнен $folder/$titleFolders[$i]/$nameFolder <br>";
-        }
-       else
-       {
-           echo" Создана директория $folder/$titleFolders[$i]/$nameFolder <br>";
-       }
+//        if(!isset($result))
+//        {
+//            echo "Запрос не выполнен $folder/$titleFolders[$i]/$nameFolder <br>";
+//        }
+//       else
+//       {
+//           echo" Создана директория $folder/$titleFolders[$i]/$nameFolder <br>";
+//       }
 
         $queryCountInSection="SELECT reports.id_report, reports.title_report
                                 From reports
@@ -244,7 +243,7 @@ if(isset($_POST['selectResults']))
 
     mysqli_close($dbc);
 
-    echo "данные успешно извлечены ";
+    echo "работа с данными окончена";
     exit();
 }
 

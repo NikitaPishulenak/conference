@@ -28,7 +28,6 @@ mysqli_query($dbc,'SET NAMES utf8');
 
 if(isset($_POST['btnSend']))
 {
-
     //О статье
     $language=$_POST['chooseLanguage'];
     $titleOfPaper=$_POST['titleOfPaper'];
@@ -119,95 +118,75 @@ if(isset($_POST['btnSend']))
     $supervisorEmail2=$_POST['emailSupervisor2'];
     $supervisorTelephone2=$_POST['telSupervisor2'];
 
-
     //Прочие данные
     $section=$_POST['section'];
     $formParticipation=$_POST['formParticipation'];
     $contentsReport=$_POST['contentsReport'];
 
-    $query="INSERT INTO reports (id_report, title_report, introduction, aim, materialsAndMethods,
-                                results, conclusions, id_contentReport, id_formParticipation,
-                                id_sections)
-            VALUES ('', '$titleOfPaper', '$introduction','$aim','$materialsAndMethods','$results','$conclusions','$contentsReport','$formParticipation','$section');";
+    $q1="INSERT INTO reports (id_report, title_report, introduction, aim, materialsAndMethods,results, conclusions, id_contentReport, id_formParticipation, id_sections)
+            VALUES ('', '$titleOfPaper', '$introduction','$aim','$materialsAndMethods','$results','$conclusions','$contentsReport','$formParticipation','$section')";
+    mysqli_query($dbc, $q1)
+        or die ("Не удалось вставить reports");
 
-    $query .= "INSERT INTO users (id_user, firstnameUser, secondnameUser, midlenameUser, birthdate, city, country, fullNameInstitute, abbreviationInstitute, 
-                              id_status, nameFaculti, id_course, email, telephone) 
+    $q2="INSERT INTO users (id_user, firstnameUser, secondnameUser, midlenameUser, birthdate, city, country, fullNameInstitute, abbreviationInstitute, id_status, nameFaculti, id_course, email, telephone) 
             VALUES ('','$authorFirstname','$authorSecondname','$authorMidlname','$authorBirthdate', '$authorCity', '$authorCountry', '$authorUniversityName',
-                    '$authorAbbreviatureUniver','$authorStatusAuthor', '$authorFacultyName', '$authorCourse','$authorEmail','$authorTelephone');";
+                    '$authorAbbreviatureUniver','$authorStatusAuthor', '$authorFacultyName', '$authorCourse','$authorEmail','$authorTelephone')";
+    mysqli_query($dbc, $q2)
+    or die ("Не удалось вставить user1");
 
-
-
-    $query .= "INSERT INTO users (id_user, firstnameUser, secondnameUser, midlenameUser, birthdate, city, country, fullNameInstitute, abbreviationInstitute, 
-                              id_status, nameFaculti, id_course, email, telephone) 
+    $q3="INSERT INTO users (id_user, firstnameUser, secondnameUser, midlenameUser, birthdate, city, country, fullNameInstitute, abbreviationInstitute, id_status, nameFaculti, id_course, email, telephone) 
             VALUES ('','$authorFirstname2','$authorSecondname2','$authorMidlname2','$authorBirthdate2', '$authorCity2', '$authorCountry2', '$authorUniversityName2',
-                    '$authorAbbreviatureUniver2','$authorStatusAuthor2', '$authorFacultyName2', '$authorCourse2','$authorEmail2','$authorTelephone2');";
+                    '$authorAbbreviatureUniver2','$authorStatusAuthor2', '$authorFacultyName2', '$authorCourse2','$authorEmail2','$authorTelephone2')";
+    mysqli_query($dbc, $q3)
+    or die ("Не удалось вставить user2");
 
-
-    $query .= "INSERT INTO boss (id_boss, firstnameBoss, secondnameBoss, midlnameBoss, id_scientificDegree, id_academicRanks, id_positionSupervisor,
-                                fullNameInstitute, name_department, city, email, telephone)
+    $q4="INSERT INTO boss (id_boss, firstnameBoss, secondnameBoss, midlnameBoss, id_scientificDegree, id_academicRanks, id_positionSupervisor, fullNameInstitute, name_department, city, email, telephone)
                 VALUES ('','$firstnameSupervisor','$secondnameSupervisor','$midlenameSupervisor','$supervisorScientificDegree','$supervisorAcademicRanks',
-                        '$supervisorPosition','$supervisorUniversityName','$supervisorDepartment','$supervisorCity','$supervisorEmail','$supervisorTelephone');";
+                        '$supervisorPosition','$supervisorUniversityName','$supervisorDepartment','$supervisorCity','$supervisorEmail','$supervisorTelephone')";
+    mysqli_query($dbc, $q4)
+    or die ("Не удалось вставить boss1");
 
-
-    $query .= "INSERT INTO boss (id_boss, firstnameBoss, secondnameBoss, midlnameBoss, id_scientificDegree, id_academicRanks, id_positionSupervisor,
-                                fullNameInstitute, name_department, city, email, telephone)
+    $q5="INSERT INTO boss (id_boss, firstnameBoss, secondnameBoss, midlnameBoss, id_scientificDegree, id_academicRanks, id_positionSupervisor, fullNameInstitute, name_department, city, email, telephone)
                 VALUES ('','$firstnameSupervisor2','$secondnameSupervisor2','$midlenameSupervisor2','$supervisorScientificDegree2','$supervisorAcademicRanks2',
                         '$supervisorPosition2','$supervisorUniversityName2','$supervisorDepartment2','$supervisorCity2','$supervisorEmail2','$supervisorTelephone2')";
+    mysqli_query($dbc, $q5)
+    or die ("Не удалось вставить boss2");
 
-
-
-
-
-
-    $result=mysqli_multi_query($dbc, $query)
-        or die("Не удалось выполнить запрос");
-    //mysqli_close($dbc);
 
     // Нахожу последние индексы report, boss1, boss2
-
-    $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
-    or die("Не удалось подключиться к БД");
     $queryRep="SELECT id_report FROM reports ORDER BY id_report DESC LIMIT 1";
     $res=mysqli_query($dbc, $queryRep)
-        or die(" Не удалось извлечь ид report");
-    while($row=mysqli_fetch_array($res))
-    {
-        $last_id_report=$row['id_report'];
-    }
+        or die("Не удалось извлечь id report");
+    $row=mysqli_fetch_row($res);
 
+    $last_id_report=$row[0];
 
     $query="SELECT id_boss FROM boss ORDER BY id_boss DESC LIMIT 1";
     $res=mysqli_query($dbc, $query)
-    or die(" Не удалось извлечь ид boss");
-    while($row=mysqli_fetch_array($res))
-    {
-        $last_id_boss2=$row['id_boss'];
-    }
-    $last_id_boss1=($last_id_boss2-1);
+    or die(" Не удалось извлечь id boss");
+    $row=mysqli_fetch_array($res);
 
+    $last_id_boss2=$row[0];
+    $last_id_boss1=($last_id_boss2-1);
 
     $query="SELECT id_user FROM users ORDER BY id_user DESC LIMIT 1";
     $res=mysqli_query($dbc, $query)
-    or die(" Не удалось извлечь ид user");
-    while($row=mysqli_fetch_array($res))
-    {
-        $last_id_user2=$row['id_user'];
-    }
+    or die(" Не удалось извлечь id user");
+    $row=mysqli_fetch_array($res);
+
+    $last_id_user2=$row[0];
     $last_id_user1=($last_id_user2-1);
 
 
-    //Вставляю итоговые данные в промежуточную таблицу на основании выше ид
-
+    //Вставляю итоговые данные в промежуточную таблицу на основании выше id
     $query="INSERT INTO conference (id_conference, id_languages, id_report, id_user1, id_user2, id_boss1, id_boss2) 
             VALUES ('', '$language', '$last_id_report','$last_id_user1','$last_id_user2','$last_id_boss1','$last_id_boss2')";
     $result=mysqli_query($dbc, $query)
     or die("Не удалось выполнить запрос по добавлению данных в итоговую таблицу");
 
-//    mysqli_close($dbc);
     include_once 'sendMail.php';
     include_once 'info.html';
     exit();
-
 }
 
 ?>
@@ -219,9 +198,6 @@ if(isset($_POST['btnSend']))
             <em class="hint">Дальнейшее заполнение формы - СТРОГО на выбранном языке (Further form filling - ONLI in selected language)!!!</em><br>
 
             <?php
-//            include_once 'connect.php';
-//            $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
-//            or die("Не удалось подключиться к БД");
             $query="SELECT * FROM languages";
             $result=mysqli_query($dbc, $query)
             or die ("Не удалось выполнить запрос");
@@ -241,39 +217,32 @@ if(isset($_POST['btnSend']))
             <b> Название работы (Title of Paper)</b><br>
             <em class="hint"> Пример (example): Особенности центральной гемодинамики у пациентов с метаболическим синдромом</em><br>
             <input type="text" name="titleOfPaper" id="titleOfPaper" required pattern="^[A-ZА-Я]{1}.*$"><br>
-
-        </div>
-        <br><br>
+        </div> <br><br>
 
         <div id="introduction">
             <b> Введение (Introduction)</b><br>
             <textarea rows="10" cols="80" name="introduction" required ></textarea>
-        </div>
-        <br><br>
+        </div> <br><br>
 
         <div id="aim">
             <b> Цель исследования (Aim)</b><br>
             <textarea rows="10" cols="80" name="aim" required ></textarea>
-        </div>
-        <br><br>
+        </div>  <br><br>
 
         <div id="materialsAndMethods">
             <b> Материалы и методы (Materials and methods)</b><br>
             <textarea rows="10" cols="80" name="materialsAndMethods" required ></textarea>
-        </div>
-        <br><br>
+        </div> <br><br>
 
         <div id="results">
             <b> Результаты (Results)</b><br>
             <textarea rows="10" cols="80" name="results" required ></textarea>
-        </div>
-        <br><br>
+        </div> <br><br>
 
         <div id="conclusions">
             <b> Выводы (Conclusions)</b><br>
             <textarea rows="10" cols="80" name="conclusions" required ></textarea>
-        </div>
-        <br><br>
+        </div> <br><br>
 
 
         <h1 id="aboutAuthor"><abbr title="Для того, чтобы свернуть блок кликните мышью!))">Информация об авторе (Information about the Author)</abbr> </h1><hr><br>
@@ -341,7 +310,6 @@ if(isset($_POST['btnSend']))
 
             while($row=mysqli_fetch_array($result))
             {
-
                 echo'<input type="radio" name="facultyName" value="'.$row['name_faculti'].'"><em class="radioNameUniver"> '.$row['name_faculti'].' </em>';
                 echo'<br>';
             }
@@ -492,8 +460,6 @@ if(isset($_POST['btnSend']))
         </div>
 
 
-
-
         <h1 id="secondAuthorLabel"><abbr title="Для того, чтобы свернуть блок кликните мышью!))">Сведения о научном руководителе <br>
             Information about the Second Author </abbr></h1>
         <div id="secondAuthor">
@@ -503,7 +469,6 @@ if(isset($_POST['btnSend']))
             </abbr> </h3><hr>
 
             <div id="firstSupervisor">
-
 
                 <b> Фамилия 1-го научного руководителя (Surname of the 1st Supervisor):</b><br>
                 <input type="text" name="secondnameSupervisor" required pattern="^[А-Я]{1}[а-яА-Я\-]{2,30}|[A-Z]{1}[a-zA-Z\-]{2,30}$" placeholder="Петрова"><br><br>
@@ -546,7 +511,6 @@ if(isset($_POST['btnSend']))
                 echo'</select>';
                 ?><br><br>
 
-
                 <b>Должность 1-го научного руководителя (Position of the 1st Supervisor)</b><br>
 
                 <?php
@@ -562,7 +526,6 @@ if(isset($_POST['btnSend']))
                 }
                 echo'</select>';
                 ?><br><br>
-
 
                 <b> Полное название учебного заведения/организации 1-го научного руководителя (Full name of the 1st Supervisor institution):</b><br>
                 <input type="radio" name="universityNameSupervisor" value="Белорусский государственный медицинский университет" checked><em class="radioNameUniver"> Белорусский государственный медицинский университет</em><br>
@@ -589,7 +552,6 @@ if(isset($_POST['btnSend']))
 
                 <b> Телефон 1-го научного руководителя (Telephone № of the 1st Supervisor):</b><br>
                 <input type="tel" name="telSupervisor" pattern="^[0-9()\-+ ]{12,19}" title="Введите в формате +375-(33)-111-22-33""><br><br>
-
             </div>
 
 
@@ -598,7 +560,6 @@ if(isset($_POST['btnSend']))
             </abbr></h3><hr>
 
             <div id="secondSupervisor">
-
                 <b> Фамилия 2-го научного руководителя (Surname of the 2st Supervisor):</b><br>
                 <input type="text" name="secondnameSupervisor2"  pattern="^[А-Я]{1}[а-яА-Я\-]{2,30}|[A-Z]{1}[a-zA-Z\-]{2,30}$" placeholder="Петрова"><br><br>
 
@@ -616,7 +577,7 @@ if(isset($_POST['btnSend']))
                 or die ("Не удалось выполнить запрос");
 
                 echo'<select name="scientificDegree2" >';
-                //echo '<option value=""> не выбрано/not chosen</option>';
+                echo '<option value=""> не выбрано/not chosen</option>';
                 while($row=mysqli_fetch_array($result))
                 {
                     echo '<option value="'.$row['id_scientificDegree'].'">'.$row['name_scientificDegree'].'</option>';
@@ -640,7 +601,6 @@ if(isset($_POST['btnSend']))
                 echo'</select>';
                 ?><br><br>
 
-
                 <b>Должность 2-го научного руководителя (Position of the 2st Supervisor)</b><br>
 
                 <?php
@@ -649,14 +609,13 @@ if(isset($_POST['btnSend']))
                 or die ("Не удалось выполнить запрос");
 
                 echo'<select name="positionSupervisor2" >';
-                //echo '<option value=""> не выбрано/not chosen</option>';
+                echo '<option value=""> не выбрано/not chosen</option>';
                 while($row=mysqli_fetch_array($result))
                 {
                     echo '<option value="'.$row['id_positionSupervisor'].'">'.$row['name_positionSupervisor'].'</option>';
                 }
                 echo'</select>';
                 ?><br><br>
-
 
                 <b> Полное название учебного заведения/организации 2-го научного руководителя (Full name of the 2st Supervisor institution):</b><br>
                 <input type="radio" name="universityNameSupervisor2" value="Белорусский государственный медицинский университет" ><em class="radioNameUniver"> Белорусский государственный медицинский университет</em><br>
@@ -673,10 +632,10 @@ if(isset($_POST['btnSend']))
 
                 <b>Название кафедры/структурного подразделения 2-го научного руководителя (Department)</b><br>
                 <em class="hint"> Пример (example): Акушерства и гинекологии</em><br>
-                <input type="text" name="department2" pattern="^[А-Я]{1}[а-яА-Я\-\s]{3,150}|[A-Z]{1}[a-zA-Z\-\s]{3,150}$" value="Педиатрия"><br><br>
+                <input type="text" name="department2" pattern="^[А-Я]{1}[а-яА-Я\-\s]{3,150}|[A-Z]{1}[a-zA-Z\-\s]{3,150}$" ><br><br>
 
                 <b> Город 2-го научного руководителя (City):</b><br>
-                <input type="text" name="citySupervisor2" placeholder="Минск" pattern="^[А-Я]{1}[а-яА-Я\-\s]{3,30}|[A-Z]{1}[a-zA-Z\-\s]{3,30}$" value="Минск"><br><br>
+                <input type="text" name="citySupervisor2" placeholder="Минск" pattern="^[А-Я]{1}[а-яА-Я\-\s]{3,30}|[A-Z]{1}[a-zA-Z\-\s]{3,30}$"><br><br>
 
                 <b> E-mail  2-го научного руководителя (E-mail of the 1st Supervisor):</b><br>
                 <input type="email" name="emailSupervisor2" placeholder="example@exam.ru" pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"><br><br>
@@ -686,7 +645,6 @@ if(isset($_POST['btnSend']))
 
             </div>
         </div>
-
 
 
             <h1 id="otherInformationLabel"><abbr title="Для того, чтобы свернуть блок кликните мышью!))"> Прочие сведения <br> Other information </abbr></h1><hr>
@@ -723,7 +681,6 @@ if(isset($_POST['btnSend']))
                 echo'</select>';
                 ?><br><br>
 
-
                 <b>Содержание доклада(Contents of the report):</b><br>
                 <?php
                 $query="SELECT * FROM contentsReport";
@@ -739,11 +696,9 @@ if(isset($_POST['btnSend']))
                 echo'</select>';
                 mysqli_close($dbc);
                 ?><br><br>
-
             </div>
 
         <button  type="submit" name="btnSend" >Отправить</button><br><br>
-
         </div>
 </form>
 
