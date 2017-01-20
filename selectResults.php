@@ -125,14 +125,6 @@ if(isset($_POST['selectResults']))
                     )";
 
         $result=mysqli_query($dbc, $query);
-//        if(!isset($result))
-//        {
-//            echo "Запрос не выполнен $folder/$titleFolders[$i]/$nameFolder <br>";
-//        }
-//       else
-//       {
-//           echo" Создана директория $folder/$titleFolders[$i]/$nameFolder <br>";
-//       }
 
         $queryCountInSection="SELECT reports.id_report, reports.title_report
                                 From reports

@@ -134,3 +134,30 @@ footer {
     margin: 0.3% -0.6% -10% -0.6%;
     text-align: center;
 }
+
+#panelDownload{
+    position: fixed;
+    top:45%;
+    left:20%;
+   /*// width: 50%;*/
+}
+
+button#download{
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -khtml-border-radius: 15px;
+    height: 100px;
+    width: 160px;
+    color: darkblue;
+    font-size: 17px;
+    font-family: "fantasy";
+    background: lawngreen;
+    background-image: url("images/dow.png");
+    outline: none;
+}
+
+button#download:hover{
+    border:solid lime 5px;
+    background-color: gainsboro;
+}
