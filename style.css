@@ -148,16 +148,25 @@ button#download{
     -moz-border-radius: 15px;
     -khtml-border-radius: 15px;
     height: 100px;
-    width: 160px;
+    width: 170px;
     color: darkblue;
     font-size: 17px;
     font-family: "fantasy";
-    background: lawngreen;
+    /*background: lawngreen;*/
     background-image: url("images/dow.png");
+    border: solid green 3px;
     outline: none;
 }
 
 button#download:hover{
     border:solid lime 5px;
     background-color: gainsboro;
+}
+
+.manageButton{
+    background:orange;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -khtml-border-radius: 15px;
 }

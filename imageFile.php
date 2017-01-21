@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['createpdf']))
+if(isset($_POST['btnDownload']))
 {
     $post = $_POST;
     $error = "";
@@ -33,12 +33,11 @@ if(isset($_POST['createpdf']))
         }
         else
             $error .= "* Please select file to zip ";
-
     }
     else
         $error .= "* You dont have ZIP extension";
 
-    echo $error;
+    //echo $error;
 }
 
 ?>
@@ -54,6 +53,7 @@ if(isset($_POST['createpdf']))
 
 <div id="conteiner">
     <form name="zips" method="post">
+        <h1>Выберите файлы для скачивания <br> Select files to download</h1>
 
             <?php
             $path="ConferenceData\\";
@@ -65,13 +65,13 @@ if(isset($_POST['createpdf']))
                 if ($value !='.' and $value !='..' )
                 {
                     echo '<b>'.$value.'</b><br>';
-                    $filVlo=scandir($path.$value);
+                    $attachedFile=scandir($path.$value);
                     echo '<ul>';
-                    foreach ($filVlo as $val)
+                    foreach ($attachedFile as $attachedValue)
                     {
-                        if($val !='.' and $val != '..')
+                        if($attachedValue !='.' and $attachedValue != '..')
                         {
-                            echo '<input type="checkbox" name="files[]" value="'.$value.'/'.$val.'" /><i>'.$val.'</i><br><br>';
+                            echo '<input type="checkbox" name="files[]" value="'.$value.'/'.$attachedValue.'" /><i>'.$attachedValue.'</i><br><br>';
                         }
                     }
                     echo '</ul>';
@@ -90,9 +90,9 @@ if(isset($_POST['createpdf']))
                 }
                 </script>
 
-            <input type="checkbox" name="sel_all" title="выбрать все" onclick="checkChoice(this.form)">выбрать все<br>
-            <button name="createpdf" id="download"><b>Скачать ZIP архивом/  Download as ZIP</b></button>
-            <input type="reset" name="reset"  value="Reset" />
+            <input type="checkbox" name="sel_all" title="выбрать все" onclick="checkChoice(this.form)">Выбрать все / Select All<br>
+            <input type="reset" class="manageButton" name="reset"  value="Отменить выбор/Cansel select"/><br><br>
+            <button name="btnDownload" id="download"><b>Скачать ZIP архивом/  Download as ZIP</b></button>
         </div>
 
     </form>
