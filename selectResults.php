@@ -129,9 +129,9 @@
 
             $result=mysqli_query($dbc, $query);
 
-            $queryCountInSection="SELECT reports.id_report, reports.title_report
+            $queryCountInSection="SELECT id_report, title_report
                                     From reports
-                                    WHERE reports.id_sections='$i'";
+                                    WHERE id_sections='$i'";
             $resultCountInSection=mysqli_query($dbc, $queryCountInSection)
                 or die("Папки doc не извлечены");
 

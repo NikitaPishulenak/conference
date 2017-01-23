@@ -1,12 +1,11 @@
 <?php
 if(isset($_POST['btnDownload']))
 {
-    $post = $_POST;
     $error = "";
     $file_folder = "ConferenceData/"; // папка с файлами
     if(extension_loaded('zip'))
     {
-        if(isset($post['files']) and count($post['files']) > 0)
+        if(isset($_POST['files']) and count($_POST['files']) > 0)
         {
             // проверяем выбранные файлы
             $zip = new ZipArchive(); // подгружаем библиотеку zip
@@ -15,7 +14,7 @@ if(isset($_POST['btnDownload']))
             {
                 $error .= "* Sorry ZIP creation failed at this time";
             }
-            foreach($post['files'] as $file)
+            foreach($_POST['files'] as $file)
             {
                 $zip->addFile($file_folder.$file); // добавляем файлы в zip архив
             }
@@ -76,7 +75,6 @@ if(isset($_POST['btnDownload']))
                     }
                     echo '</ul>';
                 }
-                else{}
             }
             echo '</ol>';
             ?>
