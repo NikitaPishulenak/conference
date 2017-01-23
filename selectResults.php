@@ -36,13 +36,15 @@
         include_once 'connect.php';
         $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
             or die ("Соединение не установлено");
-        mysqli_query($dbc,"SET NAMES 'UTF8'");
+        mysqli_query($dbc,"SET NAMES 'UTF8';");
+//        mysqli_query($dbc,"SET CHARACTER SET 'utf8';");
+//        mysqli_query($dbc,"SET SESSION collation_connection='utf8_general_ci';");
 
         $date= date("j-M-G-i-s");
         $nameFolder="$date.csv";
 
         $folder="ConferenceData\\";//для работы с word
-        $folderE="C://OpenServer/domains/localhost/conference/ConferenceData";//для работы с exel
+        $folderE=$_SERVER['DOCUMENT_ROOT']."/conference/ConferenceData";//для работы с exel
 
         $query2="SELECT id_section FROM sections LIMIT 75";
         $result2=mysqli_query($dbc, $query2)
