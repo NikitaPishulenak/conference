@@ -2,7 +2,7 @@
 if(isset($_POST['btnDownload']))
 {
     $error = "";
-    $file_folder = "ConferenceData/"; // папка с файлами
+    $file_folder = "DATA/"; // папка с файлами
     if(extension_loaded('zip'))
     {
         if(isset($_POST['files']) and count($_POST['files']) > 0)
@@ -55,7 +55,7 @@ if(isset($_POST['btnDownload']))
         <h1>Выберите файлы для скачивания <br> Select files to download</h1>
 
             <?php
-            $path="ConferenceData\\";
+            $path="DATA/";
 
             $files = scandir($path);
             echo '<ol>';

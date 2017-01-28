@@ -13,9 +13,19 @@
 <div id="bottom"><img src="images/bottom.png" class="manageArrow" alt="Bottom"></div>
 
 <div class="header">
-    <h1> Регистрация участников LXXI</h1>
-    <h1>АПСМиФ 2017</h1>
-    <h3>Registration</h3>
+    <table>
+        <tr>
+            <td  width="100%">
+                <h1> Регистрация участников LXXI</h1>
+                <h1>АПСМиФ 2017</h1>
+                <h3>Registration</h3>
+            </td>
+            <td>
+                <a href="selectResults.php"><img alt="ссылка на страницу скачивания" src="images/book.gif"></a>
+            </td>
+        </tr>
+    </table>
+
     <hr>
 </div>
 

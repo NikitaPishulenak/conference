@@ -50,7 +50,7 @@ input:hover{
 #conteiner{
     background: white;
     text-align: center;
-    margin: 0% 15% 0% 15%;
+    margin: 0% 13% 0% 13%;
     border:solid gray 1px;
     height: 100%;
 }
@@ -75,7 +75,7 @@ em.radioNameUniver{
 
 #otherFac1,#fullNameUniver1, #fullNameUniver2, #otherFac2,#UniverBoss1,#UniverBoss2{
     position: absolute;
-    left: 41%;
+    left: 47%;
     width:30%;
 }
 
@@ -138,8 +138,7 @@ footer {
 #panelDownload{
     position: fixed;
     top:45%;
-    left:20%;
-   /*// width: 50%;*/
+    left:15%;
 }
 
 button#download{

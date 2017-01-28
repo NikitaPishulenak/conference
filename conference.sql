@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.7
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Хост: 127.0.0.1:3306
--- Время создания: Янв 03 2017 г., 01:09
--- Версия сервера: 5.5.50
--- Версия PHP: 5.3.29
+-- Хост: localhost
+-- Время создания: Янв 28 2017 г., 16:56
+-- Версия сервера: 5.5.54-0ubuntu0.14.04.1
+-- Версия PHP: 5.5.9-1ubuntu4.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- База данных: `conference`
@@ -27,9 +27,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `academicRanks` (
-  `id_academicRanks` int(10) NOT NULL,
-  `name_academicRanks` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+  `id_academicRanks` int(10) NOT NULL AUTO_INCREMENT,
+  `name_academicRanks` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_academicRanks`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=19 ;
 
 --
 -- Дамп данных таблицы `academicRanks`
@@ -62,7 +63,7 @@ INSERT INTO `academicRanks` (`id_academicRanks`, `name_academicRanks`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `boss` (
-  `id_boss` int(10) NOT NULL,
+  `id_boss` int(10) NOT NULL AUTO_INCREMENT,
   `firstnameBoss` varchar(55) NOT NULL,
   `secondnameBoss` varchar(55) NOT NULL,
   `midlnameBoss` varchar(55) DEFAULT NULL,
@@ -73,19 +74,12 @@ CREATE TABLE IF NOT EXISTS `boss` (
   `name_department` text NOT NULL,
   `city` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `telephone` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `boss`
---
-
-INSERT INTO `boss` (`id_boss`, `firstnameBoss`, `secondnameBoss`, `midlnameBoss`, `id_scientificDegree`, `id_academicRanks`, `id_positionSupervisor`, `fullNameInstitute`, `name_department`, `city`, `email`, `telephone`) VALUES
-(3, 'Лия', 'Серебряная', 'Валентиновна', 33, 4, 3, 'Белорусский государственный медицинский университет', 'Терапии', 'Минск', 'ser@yandex.com', '375294536655'),
-(4, '', '', '', 1, 1, 1, '', '', '', '', ''),
-(5, 'ggg', 'ggg', 'ggg', 3, 6, 3, 'wewefdew', 'fefwef', 'wef', '', ''),
-(6, 'Лия', 'Серебряная', 'Валентиновна', 1, 1, 1, 'Белорусский государственный медицинский университет', 'Предприятие', 'Минск', 'kon@mail.ru', '375778567734'),
-(7, '', '', '', 1, 1, 1, '', '', '', '', '');
+  `telephone` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_boss`),
+  KEY `id_scientificDegree` (`id_scientificDegree`),
+  KEY `id_academicRanks` (`id_academicRanks`),
+  KEY `id_positionSupervisor` (`id_positionSupervisor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -94,23 +88,21 @@ INSERT INTO `boss` (`id_boss`, `firstnameBoss`, `secondnameBoss`, `midlnameBoss`
 --
 
 CREATE TABLE IF NOT EXISTS `conference` (
-  `id_conference` int(10) NOT NULL,
+  `id_conference` int(10) NOT NULL AUTO_INCREMENT,
   `id_languages` int(10) NOT NULL,
   `id_report` int(10) NOT NULL,
   `id_user1` int(10) NOT NULL,
   `id_user2` int(10) NOT NULL,
   `id_boss1` int(10) NOT NULL,
-  `id_boss2` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `conference`
---
-
-INSERT INTO `conference` (`id_conference`, `id_languages`, `id_report`, `id_user1`, `id_user2`, `id_boss1`, `id_boss2`) VALUES
-(2, 1, 2, 2, 3, 3, 4),
-(3, 2, 2, 6, 6, 5, 4),
-(4, 1, 3, 7, 8, 6, 7);
+  `id_boss2` int(10) NOT NULL,
+  PRIMARY KEY (`id_conference`),
+  KEY `id_languages` (`id_languages`),
+  KEY `id_report` (`id_report`),
+  KEY `id_user1` (`id_user1`),
+  KEY `id_user2` (`id_user2`),
+  KEY `id_boss1` (`id_boss1`),
+  KEY `id_boss2` (`id_boss2`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -119,9 +111,10 @@ INSERT INTO `conference` (`id_conference`, `id_languages`, `id_report`, `id_user
 --
 
 CREATE TABLE IF NOT EXISTS `contentsReport` (
-  `id_contentsReport` int(10) NOT NULL,
-  `name_contentsReport` varchar(55) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `id_contentsReport` int(10) NOT NULL AUTO_INCREMENT,
+  `name_contentsReport` varchar(55) NOT NULL,
+  PRIMARY KEY (`id_contentsReport`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `contentsReport`
@@ -138,9 +131,10 @@ INSERT INTO `contentsReport` (`id_contentsReport`, `name_contentsReport`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `courses` (
-  `id_course` int(10) NOT NULL,
-  `name_course` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+  `id_course` int(10) NOT NULL AUTO_INCREMENT,
+  `name_course` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_course`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Дамп данных таблицы `courses`
@@ -162,9 +156,10 @@ INSERT INTO `courses` (`id_course`, `name_course`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `faculties` (
-  `id_faculti` int(10) NOT NULL,
-  `name_faculti` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+  `id_faculti` int(10) NOT NULL AUTO_INCREMENT,
+  `name_faculti` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_faculti`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `faculties`
@@ -178,8 +173,7 @@ INSERT INTO `faculties` (`id_faculti`, `name_faculti`) VALUES
 (5, 'Военно-медицинский (Military Medicine)'),
 (6, 'Фармацевтический (Pharmacy)'),
 (7, 'Медицинский факультет иностранных учащихся (Medical Faculty for International Students)'),
-(8, '-Нет/No-'),
-(9, 'Другое');
+(8, '-Нет/No-');
 
 -- --------------------------------------------------------
 
@@ -188,9 +182,10 @@ INSERT INTO `faculties` (`id_faculti`, `name_faculti`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `formParticipation` (
-  `id_formParticipation` int(10) NOT NULL,
-  `name_formParticipation` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `id_formParticipation` int(10) NOT NULL AUTO_INCREMENT,
+  `name_formParticipation` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_formParticipation`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `formParticipation`
@@ -208,9 +203,10 @@ INSERT INTO `formParticipation` (`id_formParticipation`, `name_formParticipation
 --
 
 CREATE TABLE IF NOT EXISTS `languages` (
-  `id_language` int(5) NOT NULL,
-  `name_language` varchar(20) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `id_language` int(5) NOT NULL AUTO_INCREMENT,
+  `name_language` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_language`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `languages`
@@ -227,9 +223,10 @@ INSERT INTO `languages` (`id_language`, `name_language`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `positionSupervisor` (
-  `id_positionSupervisor` int(10) NOT NULL,
-  `name_positionSupervisor` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+  `id_positionSupervisor` int(10) NOT NULL AUTO_INCREMENT,
+  `name_positionSupervisor` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_positionSupervisor`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Дамп данных таблицы `positionSupervisor`
@@ -268,7 +265,7 @@ INSERT INTO `positionSupervisor` (`id_positionSupervisor`, `name_positionSupervi
 --
 
 CREATE TABLE IF NOT EXISTS `reports` (
-  `id_report` int(10) NOT NULL,
+  `id_report` int(10) NOT NULL AUTO_INCREMENT,
   `title_report` text NOT NULL,
   `introduction` text NOT NULL,
   `aim` text NOT NULL,
@@ -277,16 +274,12 @@ CREATE TABLE IF NOT EXISTS `reports` (
   `conclusions` text NOT NULL,
   `id_contentReport` int(10) NOT NULL,
   `id_formParticipation` int(10) NOT NULL,
-  `id_sections` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `reports`
---
-
-INSERT INTO `reports` (`id_report`, `title_report`, `introduction`, `aim`, `materialsAndMethods`, `results`, `conclusions`, `id_contentReport`, `id_formParticipation`, `id_sections`) VALUES
-(2, 'Нарушение сгибательной функции', 'Первое', 'Второе', 'Третье', 'Четвертое', 'Пятое', 1, 3, 75),
-(3, 'Заболевание аорты', 'какакака', 'кака', 'какака', 'какака', 'каукаука', 1, 1, 1);
+  `id_sections` int(10) NOT NULL,
+  PRIMARY KEY (`id_report`),
+  KEY `id_contentReport` (`id_contentReport`),
+  KEY `id_formParticipation` (`id_formParticipation`),
+  KEY `id_sections` (`id_sections`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -295,9 +288,10 @@ INSERT INTO `reports` (`id_report`, `title_report`, `introduction`, `aim`, `mate
 --
 
 CREATE TABLE IF NOT EXISTS `scientificDegree` (
-  `id_scientificDegree` int(10) NOT NULL,
-  `name_scientificDegree` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+  `id_scientificDegree` int(10) NOT NULL AUTO_INCREMENT,
+  `name_scientificDegree` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_scientificDegree`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
 
 --
 -- Дамп данных таблицы `scientificDegree`
@@ -350,9 +344,10 @@ INSERT INTO `scientificDegree` (`id_scientificDegree`, `name_scientificDegree`) 
 --
 
 CREATE TABLE IF NOT EXISTS `sections` (
-  `id_section` int(10) NOT NULL,
-  `name_section` varchar(150) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8;
+  `id_section` int(10) NOT NULL AUTO_INCREMENT,
+  `name_section` varchar(150) NOT NULL,
+  PRIMARY KEY (`id_section`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=77 ;
 
 --
 -- Дамп данных таблицы `sections`
@@ -442,9 +437,10 @@ INSERT INTO `sections` (`id_section`, `name_section`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `sectionsName` (
-  `id_sectionName` int(10) NOT NULL,
-  `name_sectionName` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
+  `id_sectionName` int(10) NOT NULL AUTO_INCREMENT,
+  `name_sectionName` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_sectionName`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=76 ;
 
 --
 -- Дамп данных таблицы `sectionsName`
@@ -534,9 +530,10 @@ INSERT INTO `sectionsName` (`id_sectionName`, `name_sectionName`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `statuses` (
-  `id_status` int(10) NOT NULL,
-  `name_status` varchar(55) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+  `id_status` int(10) NOT NULL AUTO_INCREMENT,
+  `name_status` varchar(55) NOT NULL,
+  PRIMARY KEY (`id_status`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Дамп данных таблицы `statuses`
@@ -567,7 +564,7 @@ INSERT INTO `statuses` (`id_status`, `name_status`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
-  `id_user` int(10) NOT NULL,
+  `id_user` int(10) NOT NULL AUTO_INCREMENT,
   `firstnameUser` varchar(55) NOT NULL,
   `secondnameUser` varchar(55) NOT NULL,
   `midlenameUser` varchar(55) DEFAULT NULL,
@@ -580,207 +577,12 @@ CREATE TABLE IF NOT EXISTS `users` (
   `nameFaculti` text NOT NULL,
   `id_course` int(10) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `telephone` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+  `telephone` varchar(50) NOT NULL,
+  PRIMARY KEY (`id_user`),
+  KEY `id_status` (`id_status`),
+  KEY `id_course` (`id_course`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Дамп данных таблицы `users`
---
-
-INSERT INTO `users` (`id_user`, `firstnameUser`, `secondnameUser`, `midlenameUser`, `birthdate`, `city`, `country`, `fullNameInstitute`, `abbreviationInstitute`, `id_status`, `nameFaculti`, `id_course`, `email`, `telephone`) VALUES
-(2, 'Иван', 'Метельский', 'Олегович', '1995-12-19', 'Минск', 'Республика Беларусь', 'Белорусский государственный университет информатики и радиоэлектроники', 'БГУИР', 1, '', 4, 'metla@mail.ru', '+375294466943'),
-(3, 'Екатерина', 'Рунец', 'Сергеевна', '1994-11-12', 'Молодечно', 'Республика Беларусь', 'Белорусский государственный университет', 'БГУ', 1, 'Другое', 3, 'katya@gmail.com', ''),
-(6, 'ник', 'ник', 'ник', '2017-01-03', 'ник', 'ник', 'ник', 'ник', 2, 'ник', 3, 'nik', '4534453454354'),
-(7, 'Никита', 'Метельский', 'Олегович', '1994-10-29', 'Минск', 'Республика Беларусь', 'Белорусский государственный университет информатики и радиоэлектроники', 'БГУИР', 11, 'Вычислительные машины', 5, 'metla@mail.ru', '375336112211'),
-(8, 'Екатерина', 'Рунец', 'Сергеевна', '1994-11-12', 'Молодечно', 'Республика Беларусь', 'Белорусский государственный университет', 'БГУ', 16, '-Нет/No-', 7, 'katya@gmail.com', '');
-
---
--- Индексы сохранённых таблиц
---
-
---
--- Индексы таблицы `academicRanks`
---
-ALTER TABLE `academicRanks`
-  ADD PRIMARY KEY (`id_academicRanks`);
-
---
--- Индексы таблицы `boss`
---
-ALTER TABLE `boss`
-  ADD PRIMARY KEY (`id_boss`),
-  ADD KEY `id_scientificDegree` (`id_scientificDegree`),
-  ADD KEY `id_academicRanks` (`id_academicRanks`),
-  ADD KEY `id_positionSupervisor` (`id_positionSupervisor`);
-
---
--- Индексы таблицы `conference`
---
-ALTER TABLE `conference`
-  ADD PRIMARY KEY (`id_conference`),
-  ADD KEY `id_languages` (`id_languages`),
-  ADD KEY `id_report` (`id_report`),
-  ADD KEY `id_user1` (`id_user1`),
-  ADD KEY `id_user2` (`id_user2`),
-  ADD KEY `id_boss1` (`id_boss1`),
-  ADD KEY `id_boss2` (`id_boss2`);
-
---
--- Индексы таблицы `contentsReport`
---
-ALTER TABLE `contentsReport`
-  ADD PRIMARY KEY (`id_contentsReport`);
-
---
--- Индексы таблицы `courses`
---
-ALTER TABLE `courses`
-  ADD PRIMARY KEY (`id_course`);
-
---
--- Индексы таблицы `faculties`
---
-ALTER TABLE `faculties`
-  ADD PRIMARY KEY (`id_faculti`);
-
---
--- Индексы таблицы `formParticipation`
---
-ALTER TABLE `formParticipation`
-  ADD PRIMARY KEY (`id_formParticipation`);
-
---
--- Индексы таблицы `languages`
---
-ALTER TABLE `languages`
-  ADD PRIMARY KEY (`id_language`);
-
---
--- Индексы таблицы `positionSupervisor`
---
-ALTER TABLE `positionSupervisor`
-  ADD PRIMARY KEY (`id_positionSupervisor`);
-
---
--- Индексы таблицы `reports`
---
-ALTER TABLE `reports`
-  ADD PRIMARY KEY (`id_report`),
-  ADD KEY `id_contentReport` (`id_contentReport`),
-  ADD KEY `id_formParticipation` (`id_formParticipation`),
-  ADD KEY `id_sections` (`id_sections`);
-
---
--- Индексы таблицы `scientificDegree`
---
-ALTER TABLE `scientificDegree`
-  ADD PRIMARY KEY (`id_scientificDegree`);
-
---
--- Индексы таблицы `sections`
---
-ALTER TABLE `sections`
-  ADD PRIMARY KEY (`id_section`);
-
---
--- Индексы таблицы `sectionsName`
---
-ALTER TABLE `sectionsName`
-  ADD PRIMARY KEY (`id_sectionName`);
-
---
--- Индексы таблицы `statuses`
---
-ALTER TABLE `statuses`
-  ADD PRIMARY KEY (`id_status`);
-
---
--- Индексы таблицы `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id_user`),
-  ADD KEY `id_status` (`id_status`),
-  ADD KEY `id_course` (`id_course`);
-
---
--- AUTO_INCREMENT для сохранённых таблиц
---
-
---
--- AUTO_INCREMENT для таблицы `academicRanks`
---
-ALTER TABLE `academicRanks`
-  MODIFY `id_academicRanks` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
---
--- AUTO_INCREMENT для таблицы `boss`
---
-ALTER TABLE `boss`
-  MODIFY `id_boss` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
---
--- AUTO_INCREMENT для таблицы `conference`
---
-ALTER TABLE `conference`
-  MODIFY `id_conference` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT для таблицы `contentsReport`
---
-ALTER TABLE `contentsReport`
-  MODIFY `id_contentsReport` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT для таблицы `courses`
---
-ALTER TABLE `courses`
-  MODIFY `id_course` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
---
--- AUTO_INCREMENT для таблицы `faculties`
---
-ALTER TABLE `faculties`
-  MODIFY `id_faculti` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
---
--- AUTO_INCREMENT для таблицы `formParticipation`
---
-ALTER TABLE `formParticipation`
-  MODIFY `id_formParticipation` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT для таблицы `languages`
---
-ALTER TABLE `languages`
-  MODIFY `id_language` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT для таблицы `positionSupervisor`
---
-ALTER TABLE `positionSupervisor`
-  MODIFY `id_positionSupervisor` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=25;
---
--- AUTO_INCREMENT для таблицы `reports`
---
-ALTER TABLE `reports`
-  MODIFY `id_report` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT для таблицы `scientificDegree`
---
-ALTER TABLE `scientificDegree`
-  MODIFY `id_scientificDegree` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
---
--- AUTO_INCREMENT для таблицы `sections`
---
-ALTER TABLE `sections`
-  MODIFY `id_section` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=77;
---
--- AUTO_INCREMENT для таблицы `sectionsName`
---
-ALTER TABLE `sectionsName`
-  MODIFY `id_sectionName` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=76;
---
--- AUTO_INCREMENT для таблицы `statuses`
---
-ALTER TABLE `statuses`
-  MODIFY `id_status` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
---
--- AUTO_INCREMENT для таблицы `users`
---
-ALTER TABLE `users`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
