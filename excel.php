@@ -311,8 +311,8 @@ for ($k=1; $k<76;$k++)
 
             $scientificDegree=$data['scientificDegreeFB'];
             $rank=$data['academicRanksFB'];
-            $scientificDegree2=$data['scientificDegreeSB'];
-            $rank2=$data['academicRanksSB'];
+//            $scientificDegree2=$data['scientificDegreeSB'];
+//            $rank2=$data['academicRanksSB'];
             $univerFB=$data['univerFB'];
             $cityFB=$data['cityFB'];
 
@@ -337,8 +337,8 @@ for ($k=1; $k<76;$k++)
             $template->setValue('city', $cityA);
             $template->setValue('degree', $scientificDegree);
             $template->setValue('rank', $rank);
-            $template->setValue('degree2', $scientificDegree2);
-            $template->setValue('rank2', $rank2);
+//            $template->setValue('degree2', $scientificDegree2);
+//            $template->setValue('rank2', $rank2);
 
             $template->setValue('secondnameS', $secondnameFB);
             $template->setValue('firstnameS', $firstnameFB);

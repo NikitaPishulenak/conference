@@ -32,6 +32,7 @@
 
 <?php
 include_once 'connect.php';
+ini_set('display_errors', '1');
 $dbc=mysqli_connect(HOST, USER_NAME, USER_PWD, DB_NAME)
     or die("Не удалось подключиться к БД");
 mysqli_query($dbc,'SET NAMES utf8');
