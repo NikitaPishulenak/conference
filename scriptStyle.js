@@ -50,10 +50,31 @@ $(document).ready(function () {
         $('#bottom').click(function () { // При клике по кнопке "Наверх" попадаем в эту функцию
             /* Плавная прокрутка наверх */
             $('body, html').animate({
-                scrollTop: 6000
+                scrollTop: $("#conteiner").height()
             }, delay);
         });
     });
 
+    function validateSize(fileInput) {
+        var fileObj, size;
+        if ( typeof ActiveXObject == "function" ) { // IE
+            fileObj = (new ActiveXObject("Scripting.FileSystemObject")).getFile(fileInput.value);
+        }else {
+            fileObj = fileInput.files[0];
+        }
+
+        size = fileObj.size; // Size returned in bytes.
+        alert(size);
+        if(size > 4 * 1024 * 1024){//50Mb
+            alert('To big file for uploading (4Mb - max)');
+            //Очищаем поле ввода файла
+            fileInput.parentNode.innerHTML = fileInput.parentNode.innerHTML;
+        }
+    }
+    $('#uploadFile').change(function () {
+        alert("22");
+        alert($('#uploadFile').fileSizes());
+        validateSize(this);
+    });
 
 });

@@ -25,8 +25,16 @@
     size: 30px;
 }
 
+input, textarea, select, em{
+    font-size: 18px;
+}
+
 input[type=text], input[type=email]{
     width: 70%;
+}
+
+input[type=reset]{
+    cursor: pointer;
 }
 
 select{
@@ -37,9 +45,14 @@ input:hover{
     border:solid lime 2px;
     background-color: gainsboro;
 }
+
+input[type=file]:hover{
+    border:none;
+}
+
 .header{
     text-align: center;
-    color: yellow;
+    color: #00008b;
 }
 
 .hint{
@@ -55,8 +68,12 @@ input:hover{
     height: 100%;
 }
 body{
+    padding: 0;
+    margin: 0;
     background-image: url("images/svetlyj-fon.jpg");
-    opacity: 0.7;
+    opacity: 0.8;
+    font-size: 18px;
+    font-family: "Bodoni MT";
 }
 
 b{
@@ -71,7 +88,7 @@ input[type=radio]
 em.radioNameUniver{
     position: absolute;
     left: 33%;
-   }
+}
 
 #otherFac1,#fullNameUniver1, #fullNameUniver2, #otherFac2,#UniverBoss1,#UniverBoss2{
     position: absolute;
@@ -89,22 +106,26 @@ select{
     max-width: 80%;
 }
 textarea{
-    width: 75%;
+    width: 70%;
 }
 
 button{
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -khtml-border-radius: 15px;
-    height: 8%;
-    width: 20%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    height: auto;
+    width: auto;
+    font-size: 1.1em;
     color: black;
-    font-size: 11px;
     font-family: Tahoma;
     background: lawngreen;
-    /*!important;*/
+    cursor: pointer;
     outline: none;
+}
+
+button:hover{
+    box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);;
 }
 
 .left-name{
@@ -129,9 +150,10 @@ button{
 
 footer {
     height: 5%;
-    margin-top: -5%;
+    margin-top: 30px;
     background-color: brown;
-    margin: 0.3% -0.6% -10% -0.6%;
+    /*margin: 0.3% -0.6% -10% -0.6%;*/
+    overflow: hidden;
     text-align: center;
 }
 
@@ -158,7 +180,7 @@ button#download{
 }
 
 button#download:hover{
-    border:solid lime 5px;
+    border:solid lime 3px;
     background-color: gainsboro;
 }
 
@@ -169,3 +191,15 @@ button#download:hover{
     -moz-border-radius: 15px;
     -khtml-border-radius: 15px;
 }
+
+abbr, label{
+    cursor: pointer;
+}
+
+b#text_dow{
+    transition: all 1.5s ease;
+}
+ .req{
+     color: #f00;
+     font-size: 1.5em;
+ }

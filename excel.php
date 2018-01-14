@@ -45,6 +45,7 @@ while($row3=mysqli_fetch_assoc($result3))
     }
     mkdir($curDir,0777, true);
     //echo "создана папка $curDir <br>";
+
 }
 
 require_once 'Classes/PHPExcel.php';
@@ -268,7 +269,7 @@ for ($k=1; $k<76;$k++)
 
         $word->setDefaultFontName('Times New Roman');
 
-        $queryData="SELECT reports.title_report, U1.secondnameUser AS secondnameFA, U1.firstnameUser AS firstnameFA, U1.midlenameUser AS midlenameFA,
+        $queryData="SELECT reports.title_report, reports.file_report, U1.secondnameUser AS secondnameFA, U1.firstnameUser AS firstnameFA, U1.midlenameUser AS midlenameFA,
                               U2.secondnameUser AS secondnameSA, U2.firstnameUser AS firstnameSA, U2.midlenameUser AS midlenameSA,
                               U1.fullNameInstitute, U1.city, SD1.name_scientificDegree AS scientificDegreeFB, AR1.name_academicRanks AS academicRanksFB,
                               B1.fullNameInstitute AS univerFB,
@@ -292,6 +293,7 @@ for ($k=1; $k<76;$k++)
         {
 
             $title=$data['title_report'];
+            $fileReport=$data['file_report'];
             $intro=$data['introduction'];
             $aim=$data['aim'];
             $materials=$data['materialsAndMethods'];
@@ -356,6 +358,12 @@ for ($k=1; $k<76;$k++)
             $template->setValue('conclusion', $conclusions);
 
             $template->save(''.$folderDATA.$titleFolders[$k].'/'.$str['id_report'].'.docx'); //Сохраняем результат в файл
+            if(($fileReport!="") &&(file_exists('reports/'.$titleFolders[$k].'/'.$fileReport.''))){
+                if(!copy('reports/'.$titleFolders[$k].'/'.$fileReport.'', ''.$folderDATA.$titleFolders[$k].'/'.$fileReport.'')){
+                    echo "<script>alert(\"Не удалось перенести .pdf!\")</script>";
+                }
+            }
+
         }
     }
 
