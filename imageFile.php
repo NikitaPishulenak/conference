@@ -71,7 +71,7 @@ if(isset($_POST['btnDownload']))
                     {
                         if($attachedValue !='.' and $attachedValue != '..')
                         {
-                            echo '<input type="checkbox" name="files[]" value="'.$value.'/'.$attachedValue.'" /><i>'.$attachedValue.'</i><br><br>';
+                            echo '<label><input type="checkbox" name="files[]" value="'.$value.'/'.$attachedValue.'" /><i>'.$attachedValue.'</i></label><br><br>';
                         }
                     }
                     echo '</ul>';
@@ -89,7 +89,7 @@ if(isset($_POST['btnDownload']))
                 }
                 </script>
 
-            <input type="checkbox" name="sel_all" title="выбрать все" onclick="checkChoice(this.form)">Выбрать все / Select All<br>
+            <label><input type="checkbox" name="sel_all" title="выбрать все" onclick="checkChoice(this.form)">Выбрать все / Select All</label><br>
             <input type="reset" class="manageButton" name="reset"  value="Отменить выбор/Cansel select"/><br><br>
             <button name="btnDownload" id="download"><b>Скачать ZIP архивом/  Download as ZIP</b></button>
         </div>

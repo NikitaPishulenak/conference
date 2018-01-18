@@ -304,9 +304,9 @@ for ($k=1; $k<76;$k++)
             $firstnameFA=$data['firstnameFA'];
             $midlenameFA=$data['midlenameFA'];
 
-            $secondnameSA=$data['secondnameSA'];
-            $firstnameSA=$data['firstnameSA'];
-            $midlenameSA=$data['midlenameSA'];
+            $secondnameSA=(isset($data['secondnameSA']))? $data['secondnameSA'] : "";
+            $firstnameSA=(isset($data['firstnameSA']))? $data['firstnameSA'] : "";
+            $midlenameSA=(isset($data['midlenameSA'])) ? $data['midlenameSA'] : "";
 
             $univerA=$data['fullNameInstitute'];
             $cityA=$data['city'];

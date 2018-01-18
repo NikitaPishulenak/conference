@@ -61,7 +61,7 @@ $(document).ready(function () {
 function CheckFile(file) {
     var good_ext = false;// Флаг для валидации расширения файла
     var good_size = false;// Флаг для валидации размера файла
-    var maxsize = 1024 * 1024 * 4;
+    var maxsize = 3145728;
     var iSize = 0;// Для хранения размера загружаемого файла
 
     iSize = $(file)[0].files[0].size;
@@ -84,7 +84,7 @@ function CheckFile(file) {
     }
 
     if (!good_size) {// Если не прошли валидацию по размеру файла
-        error += "Внимание! Ваш файл превышает допустимый размер 4 Mb! Выберите другой файл!";
+        error += "Внимание! Ваш файл превышает допустимый размер 3 Mb! Выберите другой файл!";
     }
     // Если есть ошибки
     if (error != '') {
