@@ -44,8 +44,8 @@
                     <strong class="colorInfo">Руководитель</strong><br>
                     отдела межвузовских связей<br>
                     Совета СНО БГМУ<br>
-                    Мательский Никита Александрович<br>
-                    Телефон: +375-29-147-56-60<br><br>
+                    Третьяков Дмитрий Сергеевич<br>
+                    Телефон: +375-44-511-45-47<br><br>
 
                     http://sno.bsmu.by<br>
                     E-mail: sno@bsmu.by<br>
@@ -60,7 +60,7 @@
 
                     <strong class="colorInfo">Chairman of Student Scientific Society of BSMU</strong><br>
                     Dmitry Solovyov<br>
-                    Phone: + 375-29-129-24-43,<br><br>
+                    Phone: +375-29-129-24-43,<br><br>
 
                     <strong class="colorInfo">Chief of the</strong><br>
                     Research department of BSMU<br>
@@ -70,8 +70,8 @@
                     <strong class="colorInfo">Chief</strong><br>
                     of the Department of inter-institutional relations<br>
                     of the Council of Student Scientific Society of BSMU<br>
-                    Nikita Matelskij<br>
-                    Phone: + 375-29-147-56-60<br><br>
+                    Dmitry Tretyakov<br>
+                    Phone: +375-44-511-45-47<br><br>
 
                     http://sno.bsmu.by<br>
                     E-mail: sno@bsmu.by<br>

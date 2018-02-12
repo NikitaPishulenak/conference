@@ -9,7 +9,7 @@
 <div id="conteiner">
     <?php
 
-    ini_set('display_errors', 'On'); // сообщения с ошибками будут показываться
+    ini_set('display_errors', 'Off'); // сообщения с ошибками будут показываться
     error_reporting(E_ALL); // E_ALL - отображаем ВСЕ ошибки
     if(isset($_POST['selectResults']))
     {
